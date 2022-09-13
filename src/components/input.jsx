@@ -14,19 +14,22 @@ const Input = ({ setCurrItems }) => {
 
   return (
     <form onSubmit={handleSubmit} className="h-1/4">
+      <div className="bg-green-100">
+        <p>prompt</p>
+      </div>
       <textarea
         onChange={(e) => setInput(e.target.value)}
         value={input}
-        className="w-full h-full border-2 border-black text-4xl m-auto p-2 resize-none"
+        className="w-full h-full text-4xl m-auto p-2 resize-none"
         placeholder="What do you have to do?"
         type="text"
       />{" "}
       <button
-        className="bg-gray-200 w-30 h-30 p-5"
+        className="w-30 h-30 p-5 absolute top-36 text-5xl font-bold left-1/4"
         onClick={addItem}
         type="submit"
       >
-        add
+        ++
       </button>
     </form>
   );

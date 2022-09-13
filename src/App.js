@@ -1,6 +1,5 @@
 import "./App.css";
 import React, { useRef, useState } from "react";
-
 import Input from "./components/input";
 import CurrItems from "./components/CurrItems";
 import PrevItems from "./components/PrevItems";
@@ -10,7 +9,6 @@ function App() {
   const [prevItems, setPrevItems] = useState([]);
 
   const date = new Date().toDateString().toUpperCase().slice(0, 10);
-
   const percent = `${Math.floor(
     (prevItems.length / (currItems.length + prevItems.length)) * 100
   )}%`;
@@ -50,7 +48,7 @@ function App() {
   return (
     <div className="App">
       <main className="bg-gray-100 overflow-hidden">
-        <section className="w-1/4 bg-gray-300">
+        <section className="w-1/3 bg-gray-300">
           <Input currItems={currItems} setCurrItems={setCurrItems} />
           <PrevItems prevItems={prevItems} />
         </section>
