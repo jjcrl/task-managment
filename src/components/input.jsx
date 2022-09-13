@@ -25,7 +25,7 @@ const Input = ({ setCurrItems }) => {
         type="text"
       />{" "}
       <button
-        className="w-30 h-30 p-5 absolute top-36 text-5xl font-bold left-1/4"
+        className="w-30 h-30 py-4 absolute top-36 text-6xl font-bold left-1/4"
         onClick={addItem}
         type="submit"
       >
