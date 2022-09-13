@@ -7,38 +7,23 @@ import PrevItems from "./components/PrevItems";
 
 function App() {
   const [currItems, setCurrItems] = useState([]);
-  const [prevItems, setPrevItems] = useState(["one", "two"]);
+  const [prevItems, setPrevItems] = useState([]);
 
   const date = new Date().toDateString().toUpperCase().slice(0, 10);
-  // const percent = Math.floor((currItems.length / prevItems.length) * 100);
-  const percent = `63%`;
 
-  // const [isShown, setIsShown] = useState(false);
+  const percent = `${Math.floor(
+    (prevItems.length / (currItems.length + prevItems.length)) * 100
+  )}%`;
 
-  // const [completedItems, setCompletedItems] = useState([]);
-
+  //DRAG N DROP CODE
   // const dragItem = useRef();
-
   // const dragOverItem = useRef();
-
-  // const addItem = (test) => {
-  //   setCurrItems((currItems) => [...currItems, test]);
-  //   setNewItem("");
-  // };
-
-  // const handleClick = (event, index) => {
-  //   const value = items[index];
-  //   setItems(items.filter((item) => item !== value));
-  // };
-
   // const dragStart = (event, position) => {
   //   dragItem.current = position;
   // };
-
   // const dragEnter = (event, position) => {
   //   dragOverItem.current = position;
   // };
-
   // const handleDrop = (event) => {
   //   const copyListItems = [...items];
   //   const dragItemContent = copyListItems[dragItem.current];
@@ -49,17 +34,17 @@ function App() {
   //   setItems(copyListItems);
   // };
 
+  //HOVER CODE
   // const handleHover = (event, index) => {
   //   setIsShown(true);
   // };
-
   // const handleLeave = (event, index) => {
   //   setIsShown(false);
   // };
 
-  // const handleDone = (event, index) => {
-  //   setCompletedItems((completedItems) => [...completedItems, items[index]]);
-  //   setItems(items.filter((item) => item !== items[index]));
+  // const handleClick = (event, index) => {
+  //   const value = items[index];
+  //   setItems(items.filter((item) => item !== value));
   // };
 
   return (
