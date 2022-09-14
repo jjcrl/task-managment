@@ -32,7 +32,11 @@ const TaskCard = ({ item, index, updateItem, removeItem, show, setShow }) => {
 
   return (
     <div
-      className="w-full h-min mb-4 bg-green-50 break-inside-avoid relative rounded-lg"
+      className={
+        item.important
+          ? "w-full h-min mb-4 bg-green-50 break-inside-avoid relative rounded-lg border-red-500 border-2"
+          : "w-full h-min mb-4 bg-green-50 break-inside-avoid relative rounded-lg"
+      }
       onMouseEnter={handleHover}
       onMouseLeave={handleHoverLeave}
     >
@@ -44,7 +48,6 @@ const TaskCard = ({ item, index, updateItem, removeItem, show, setShow }) => {
       <li className="w-full text-left px-4 pt-1 tracking-tight leading-tight">
         {item.input}
       </li>
-      {item.toggle ? <p>!</p> : null}
       <div className="flex flex-row gap-2 justify-end p-2">
         <div className="bg-green-400 w-1/2 h-full"></div>
       </div>

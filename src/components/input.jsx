@@ -11,7 +11,7 @@ const Input = ({ setCurrItems }) => {
   const addItem = () => {
     setCurrItems((currItems) => [
       ...currItems,
-      { input: input, toggle: toggle },
+      { input: input, important: toggle },
     ]);
     setInput("");
   };
