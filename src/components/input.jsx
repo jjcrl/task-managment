@@ -14,6 +14,7 @@ const Input = ({ setCurrItems }) => {
       { input: input, important: toggle },
     ]);
     setInput("");
+    setToggle(false);
   };
 
   const onEnterPress = (e) => {
@@ -49,6 +50,7 @@ const Input = ({ setCurrItems }) => {
             onChange={(e) => {
               handleChange(e);
             }}
+            checked={toggle}
           />
         </div>
       </form>
