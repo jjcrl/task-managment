@@ -14,7 +14,7 @@ const Input = ({ setCurrItems }) => {
 
   return (
     <form onSubmit={handleSubmit} className="h-1/4">
-      <div className="bg-green-100">
+      <div className="bg-green-100 py-2">
         <p>prompt</p>
       </div>
       <textarea

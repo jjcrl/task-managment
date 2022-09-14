@@ -1,27 +1,32 @@
+import { Draggable } from "react-beautiful-dnd";
+import TaskCard from "./TaskCard";
+import { useState } from "react";
+
 const CurrItems = ({ currItems, setCurrItems, setPrevItems }) => {
+  const [show, setShow] = useState(true);
+
   const updateItem = (index) => {
     setPrevItems((prevItems) => [...prevItems, currItems[index]]);
     setCurrItems(currItems.filter((item) => item !== currItems[index]));
+    setShow(!show);
   };
+
   const removeItem = (index) => {
     setCurrItems(currItems.filter((item) => item !== currItems[index]));
+    setShow(!show);
   };
+
   return (
-    <ul className="w-full h-3/4  grid-cols-3 gap-4 p-4">
+    <ul className="w-full h-full p-8 bg-blue-100 columns-3">
       {currItems.map((item, index) => (
-        <div className="w-full h-min m-auto border-2 border-black">
-          <li>{item}</li>
-          <div className="flex flex-row gap-2 justify-end p-2">
-            <button
-              className="bg-red-800 w-5 h-5 "
-              onClick={(event) => removeItem(event, index)}
-            ></button>
-            <button
-              className="bg-green-800 w-5 h-5"
-              onClick={(event) => updateItem(event, index)}
-            ></button>
-          </div>
-        </div>
+        <TaskCard
+          item={item}
+          index={index}
+          removeItem={removeItem}
+          updateItem={updateItem}
+          show={show}
+          setShow={setShow}
+        />
       ))}
     </ul>
   );
