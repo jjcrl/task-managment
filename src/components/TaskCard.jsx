@@ -9,19 +9,20 @@ const TaskCard = ({ item, index, updateItem, removeItem, show, setShow }) => {
   };
 
   const handleHoverLeave = () => {
+    setShow(false);
     setToggle(false);
   };
 
   const hoverItem = (
     <div className="flex flex-row opacity-95">
       <div
-        className="w-1/2 h-full absolute top-0 left-0 bg-red-500 rounded-l-lg"
+        className="w-1/2 h-full absolute top-0 right-0 bg-red-500 rounded-r-lg"
         onClick={() => removeItem(index)}
       >
         delete
       </div>
       <div
-        className="w-1/2 h-full absolute top-0 right-0 bg-green-500  rounded-r-lg"
+        className="w-1/2 h-full absolute top-0 left-0 bg-green-500  rounded-l-lg"
         onClick={() => updateItem(index)}
       >
         done

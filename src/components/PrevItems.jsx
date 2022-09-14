@@ -7,7 +7,7 @@ const PrevItems = ({ prevItems }) => {
           key={index}
         >
           <li className="text-lg leading-none line-through text-2xl text-green-500">
-            {item}
+            {item.input}
           </li>
         </div>
       ))}
