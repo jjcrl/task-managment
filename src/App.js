@@ -18,6 +18,8 @@ function App() {
     { input: "make an item important", important: false },
   ]);
 
+  //_↗
+
   const [prevItems, setPrevItems] = useState([]);
 
   const date = new Date().toDateString().toUpperCase().slice(0, 10);
@@ -38,7 +40,7 @@ function App() {
         </section>
 
         <section className="w-3/4 bg-gray-700 h-full">
-          <div className="h-min bg-gray-400">
+          <div className="h-min bg-neutral-900 text-white text-xl font-semibold">
             <nav className="flex flex-row justify-between px-20 py-3">
               <button>today</button>
               <button>3-day</button>
@@ -48,11 +50,13 @@ function App() {
             </nav>
           </div>
 
-          <CurrItems
-            currItems={currItems}
-            setCurrItems={setCurrItems}
-            setPrevItems={setPrevItems}
-          />
+          <div className="h-full w-full">
+            <CurrItems
+              currItems={currItems}
+              setCurrItems={setCurrItems}
+              setPrevItems={setPrevItems}
+            />
+          </div>
         </section>
       </main>
     </div>
