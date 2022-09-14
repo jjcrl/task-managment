@@ -41,8 +41,9 @@ const TaskCard = ({ item, index, updateItem, removeItem, show, setShow }) => {
         <p>data</p>
       </div>
       <li className="w-full text-left px-4 pt-1 tracking-tight leading-tight">
-        {item}
+        {item.input}
       </li>
+      {item.toggle ? <p>!</p> : null}
       <div className="flex flex-row gap-2 justify-end p-2">
         <div className="bg-green-400 w-1/2 h-full"></div>
       </div>

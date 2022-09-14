@@ -6,35 +6,24 @@ import PrevItems from "./components/PrevItems";
 
 function App() {
   const [currItems, setCurrItems] = useState([
-    "drag drop abilities",
-    "date and time info on items",
-    "buttons for sorting views",
-    "prompt and item data",
-    "item tagging tracking and sorting",
-    "storage for users info ",
-    "email over to do this in calander form ?",
-    "get some emojis up in this place ",
-    "able to press enter to add to do item",
-    "make an item important",
+    { input: "drag drop abilities", toggle: false },
+    { input: "date and time info on items", toggle: false },
+    { input: "buttons for sorting views", toggle: false },
+    { input: "prompt and item data", toggle: false },
+    { input: "item tagging tracking and sorting", toggle: false },
+    { input: "storage for users info ", toggle: false },
+    { input: "email over to do this in calander form ?", toggle: false },
+    { input: "get some emojis up in this place ", toggle: false },
+    { input: "able to press enter to add to do item", toggle: false },
+    { input: "make an item important", toggle: false },
   ]);
+
   const [prevItems, setPrevItems] = useState([]);
 
   const date = new Date().toDateString().toUpperCase().slice(0, 10);
   const percent = `${Math.floor(
     (prevItems.length / (currItems.length + prevItems.length)) * 100
   )}%`;
-
-  // const onDragStart = (e, position) => {
-  //   console.log("two");
-  // };
-
-  // const onDragEnter = (e, position) => {
-  //   console.log("one");
-  // };
-
-  // const drop = (e) => {
-  //   console.log("three");
-  // };
 
   return (
     <div className="App">
