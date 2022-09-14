@@ -1,9 +1,8 @@
 import "./App.css";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Input from "./components/input";
 import CurrItems from "./components/CurrItems";
 import PrevItems from "./components/PrevItems";
-import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
 function App() {
   const [currItems, setCurrItems] = useState([
@@ -25,36 +24,27 @@ function App() {
     (prevItems.length / (currItems.length + prevItems.length)) * 100
   )}%`;
 
-  const items = [
-    "drag drop abilities",
-    "date and time info on items",
-    "buttons for sorting views",
-    "prompt and item data",
-    "item tagging tracking and sorting",
-    "storage for users info ",
-    "email over to do this in calander form ?",
-    "get some emojis up in this place ",
-    "able to press enter to add to do item",
-    "make an item important",
-  ];
+  // const onDragStart = (e, position) => {
+  //   console.log("two");
+  // };
 
-  const onDragStart = (e, position) => {
-    console.log("two");
-  };
+  // const onDragEnter = (e, position) => {
+  //   console.log("one");
+  // };
 
-  const onDragEnter = (e, position) => {
-    console.log("one");
-  };
-
-  const drop = (e) => {
-    console.log("three");
-  };
+  // const drop = (e) => {
+  //   console.log("three");
+  // };
 
   return (
     <div className="App">
       <main className="bg-gray-100 overflow-hidden">
-        <section className="w-1/3 bg-gray-300">
+        <section className="w-1/3 bg-gray-300 flex flex-col">
           <Input currItems={currItems} setCurrItems={setCurrItems} />
+          <div className="flex flex-row w-full justify-end text-2xl">
+            {date} {percent}
+          </div>
+
           <PrevItems prevItems={prevItems} />
         </section>
 
@@ -68,10 +58,6 @@ function App() {
               <button>month</button>
             </nav>
           </div>
-          {/* <div className="flex  gap-5 w-fit  p-0 bg-none absolute right-3 ">
-            <h1>{date}</h1>
-            <h1>{percent}</h1>
-          </div> */}
 
           <CurrItems
             currItems={currItems}
