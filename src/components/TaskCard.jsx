@@ -5,22 +5,18 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
   const [toggleR, setToggleR] = useState(false);
 
   const handleRHover = () => {
-    console.log("hello right");
     setToggleR(true);
   };
 
   const handleRHoverLeave = () => {
-    console.log("right exit");
     setToggleR(false);
   };
 
   const handleLHover = () => {
-    console.log("hello left");
     setToggleL(true);
   };
 
   const handleLHoverLeave = () => {
-    console.log("left exit");
     setToggleL(false);
   };
 
@@ -100,10 +96,8 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
       }
     >
       {hoverItem}
-      <div className="w-min bg-white flex-end flex  mx-2 px-2 pb-1 bg-black text-5xl leading-none border-2 border-black text-white">
-        <p className="leading-none h-7 m-0 p-0">*</p>
-      </div>
-      <li className="w-full text-left tracking-wider leading-snug text-2xl text-black pr-2 pl-2 pt-2 font-semibold first-letter:uppercase first-letter:italic">
+
+      <li className="w-full text-left tracking-wider leading-none text-2xl text-black px-4 py-2 font-semibold first-letter:uppercase first-letter:italic">
         {item.input}
       </li>
     </div>
