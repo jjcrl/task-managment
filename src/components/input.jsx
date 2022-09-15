@@ -30,7 +30,7 @@ const Input = ({ setCurrItems }) => {
 
   return (
     <>
-      <div className="bg-green-100 py-3">
+      <div className="bg-yellow-50 py-3 text-yellow-400 font-bold tracking-wider ">
         <p>prompt</p>
       </div>
       <form onSubmit={handleSubmit}>
