@@ -8,10 +8,56 @@ const Input = ({ setCurrItems }) => {
     event.preventDefault();
   };
 
+  const emojiArr = [
+    "✅",
+    "🚀",
+    "🔧",
+    "🔩",
+    "🏁",
+    "🎉",
+    "🧨",
+    "🙌",
+    "🥳",
+    "🎊",
+    "😍",
+    "💻",
+    "🚂",
+    "⚡",
+    "🔋",
+    "🌐",
+    "🎉",
+    "👾",
+    "🧠",
+    "🤜",
+    "🧙‍♀️",
+    "🧙",
+    "🧙‍♂️",
+    "🫂",
+    "🐝",
+    "🌱",
+    "🌈",
+    "💫",
+    "⭐️",
+    "🌟",
+    "✨",
+    "⚡️",
+    "☕️",
+    "🏆",
+    "🎯",
+    "🎇",
+    "🎆",
+    "💡",
+    "💯",
+    "❗️",
+    "❕",
+  ];
+
+  const emoji = emojiArr[Math.floor(Math.random() * emojiArr.length)];
+
   const addItem = () => {
     setCurrItems((currItems) => [
       ...currItems,
-      { input: input, important: toggle },
+      { input: input, important: toggle, emoji },
     ]);
     setInput("");
     setToggle(false);
