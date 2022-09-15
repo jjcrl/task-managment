@@ -94,6 +94,7 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
           ? "w-auto h-auto mb-4 bg-pink-100 break-inside-avoid relative pb-4 pt-2"
           : "w-auto h-auto mb-4 bg-neutral-50 break-inside-avoid relative pb-5 pt-2"
       }
+      key={`item-${index}`}
     >
       {hoverItem}
 
