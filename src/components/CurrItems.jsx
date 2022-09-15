@@ -1,6 +1,6 @@
 import TaskCard from "./TaskCard";
 
-const CurrItems = ({ currItems, setCurrItems, setPrevItems }) => {
+const CurrItems = ({ currItems, setCurrItems, setPrevItems, setCurrEmoji }) => {
   const updateItem = (index) => {
     setPrevItems((prevItems) => [...prevItems, currItems[index]]);
     setCurrItems(currItems.filter((item) => item !== currItems[index]));
@@ -11,7 +11,7 @@ const CurrItems = ({ currItems, setCurrItems, setPrevItems }) => {
   };
 
   return (
-    <ul className="w-full h-full p-10 bg-neutral-900 columns-4">
+    <ul className="w-full h-full p-10 bg-neutral-500 columns-4">
       {currItems.map((item, index) => (
         <TaskCard
           item={item}
