@@ -6,16 +6,16 @@ import PrevItems from "./components/PrevItems";
 
 function App() {
   const [currItems, setCurrItems] = useState([
-    { input: "drag drop abilities", important: false },
-    { input: "date and time info on items", important: false },
-    { input: "buttons for sorting views", important: false },
-    { input: "prompt and item data", important: false },
-    { input: "item tagging tracking and sorting", important: false },
-    { input: "storage for users info ", important: false },
-    { input: "email over to do this in calander form ?", important: false },
-    { input: "get some emojis up in this place ", important: false },
-    { input: "able to press enter to add to do item", important: false },
-    { input: "make an item important", important: false },
+    // { input: "drag drop abilities", important: false },
+    // { input: "date and time info on items", important: false },
+    // { input: "buttons for sorting views", important: false },
+    // { input: "prompt and item data", important: false },
+    // { input: "item tagging tracking and sorting", important: false },
+    // { input: "storage for users info ", important: false },
+    // { input: "email over to do this in calander form ?", important: false },
+    // { input: "get some emojis up in this place ", important: false },
+    // { input: "able to press enter to add to do item", important: false },
+    // { input: "make an item important", important: false },
   ]);
 
   //_↗
