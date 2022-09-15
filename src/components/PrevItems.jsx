@@ -1,18 +1,60 @@
 const PrevItems = ({ prevItems }) => {
+  const emojiArr = [
+    "✅",
+    "🚀",
+    "🔧",
+    "🔩",
+    "🏁",
+    "🎉",
+    "🧨",
+    "🙌",
+    "🥳",
+    "🎊",
+    "😍",
+    "💻",
+    "🚂",
+    "⚡",
+    "🔋",
+    "🌐",
+    "🎉",
+    "👾",
+    "🧠",
+    "🤜",
+    "🧙‍♀️",
+    "🧙",
+    "🧙‍♂️",
+    "🫂",
+    "🐝",
+    "🌱",
+    "🌈",
+    "💫",
+    "⭐️",
+    "🌟",
+    "✨",
+    "⚡️",
+    "☕️",
+    "🏆",
+    "🎯",
+    "🎇",
+    "🎆",
+    "💡",
+    "💯",
+    "❗️",
+    "❕",
+  ];
   return (
-    <ul className=" w-full h-full  flex flex-col">
+    <ul className="w-full h-full inline	text-left break-all pl-2 bg-neutral-900">
       {prevItems.map((item, index) => (
-        <div
-          className="w-fit h-min mb-1 flex flex-col mx-auto py-2 px-2 my-2"
-          key={index}
-        >
-          <li className="text-lg leading-none line-through text-2xl text-green-500">
-            {item.input}
+        <>
+          <li className="text-2xl inline leading-none">
+            {emojiArr[Math.floor(Math.random() * emojiArr.length)]}
+          </li>{" "}
+          <li className="text-xl inline leading-none tracking-widest text-neutral-300">
+            {item.input}{" "}
           </li>
-        </div>
+        </>
       ))}
     </ul>
   );
 };
-
 export default PrevItems;
