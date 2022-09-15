@@ -30,9 +30,9 @@ function App() {
   return (
     <div className="App">
       <main className="bg-gray-100 overflow-hidden">
-        <section className="w-1/3 bg-gray-300 flex flex-col">
+        <section className="w-1/3 bg-yellow-500 flex flex-col">
           <Input currItems={currItems} setCurrItems={setCurrItems} />
-          <div className="flex flex-row w-full justify-end text-2xl">
+          <div className="flex flex-row w-full justify-end text-4xl bg-neutral-900 text-neutral-300 font-bold tracking-widest pt-2">
             {date} {percent}
           </div>
 
