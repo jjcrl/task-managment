@@ -23,9 +23,9 @@ function App() {
   const [prevItems, setPrevItems] = useState([]);
 
   const date = new Date().toDateString().toUpperCase().slice(0, 10);
-  const percent = `${Math.floor(
+  const percent = Math.floor(
     (prevItems.length / (currItems.length + prevItems.length)) * 100
-  )}%`;
+  );
 
   return (
     <div className="App">
@@ -33,7 +33,7 @@ function App() {
         <section className="w-1/3 bg-yellow-500 flex flex-col">
           <Input currItems={currItems} setCurrItems={setCurrItems} />
           <div className="flex flex-row w-full justify-end text-4xl bg-neutral-900 text-neutral-300 font-bold tracking-widest pt-2">
-            {date} {percent}
+            {date} {percent ? `${percent}%` : "0%"}
           </div>
 
           <PrevItems prevItems={prevItems} />
