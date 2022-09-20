@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Input = ({ setCurrItems }) => {
+const Input = ({ setCurrItems, dateChoice, view }) => {
   const [input, setInput] = useState();
   const [toggle, setToggle] = useState(false);
 
@@ -68,7 +68,13 @@ const Input = ({ setCurrItems }) => {
   const addItem = () => {
     setCurrItems((currItems) => [
       ...currItems,
-      { input: input, important: toggle, emoji },
+      {
+        input: input,
+        important: toggle,
+        emoji,
+        dateChoice: dateChoice ? dateChoice : "day-1",
+        id: currItems.length,
+      },
     ]);
     setInput("");
     setToggle(false);

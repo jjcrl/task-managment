@@ -3,24 +3,15 @@ import React, { useState } from "react";
 import Input from "./components/input";
 import CurrItems from "./components/CurrItems";
 import PrevItems from "./components/PrevItems";
+import TodayView from "./components/TodayView";
+import ThreeDayView from "./ThreeDayView";
 
 function App() {
-  const [currItems, setCurrItems] = useState([
-    // { input: "drag drop abilities", important: false },
-    // { input: "date and time info on items", important: false },
-    // { input: "buttons for sorting views", important: false },
-    // { input: "prompt and item data", important: false },
-    // { input: "item tagging tracking and sorting", important: false },
-    // { input: "storage for users info ", important: false },
-    // { input: "email over to do this in calander form ?", important: false },
-    // { input: "get some emojis up in this place ", important: false },
-    // { input: "able to press enter to add to do item", important: false },
-    // { input: "make an item important", important: false },
-  ]);
-
+  const [currItems, setCurrItems] = useState([]);
   //_↗
-
   const [prevItems, setPrevItems] = useState([]);
+  const [view, setView] = useState("today");
+  const [dateChoice, setDateChoice] = useState();
 
   const date = new Date().toDateString().toUpperCase().slice(0, 10);
   const percent = Math.floor(
@@ -31,7 +22,12 @@ function App() {
     <div className="App">
       <main className="bg-gray-100 overflow-hidden">
         <section className="w-1/3 bg-yellow-500 flex flex-col">
-          <Input currItems={currItems} setCurrItems={setCurrItems} />
+          <Input
+            currItems={currItems}
+            setCurrItems={setCurrItems}
+            dateChoice={dateChoice}
+            view={view}
+          />
           <div className="flex flex-row w-full justify-end text-4xl bg-neutral-900 text-neutral-300 font-bold tracking-widest pt-2">
             {date} {percent ? `${percent}%` : "0%"}
           </div>
@@ -50,13 +46,18 @@ function App() {
             </nav>
           </div>
 
-          <div className="h-full w-full">
-            <CurrItems
-              currItems={currItems}
-              setCurrItems={setCurrItems}
-              setPrevItems={setPrevItems}
-            />
-          </div>
+          {/* <TodayView
+            currItems={currItems}
+            setCurrItems={setCurrItems}
+            setPrevItems={setPrevItems}
+          /> */}
+          <ThreeDayView
+            currItems={currItems}
+            setCurrItems={setCurrItems}
+            setPrevItems={setPrevItems}
+            setDateChoice={setDateChoice}
+            dateChoice={dateChoice}
+          />
         </section>
       </main>
     </div>
