@@ -1,60 +1,27 @@
-const PrevItems = ({ prevItems, currEmoji }) => {
-  const emojiArr = [
-    "✅",
-    "🚀",
-    "🔧",
-    "🔩",
-    "🏁",
-    "🎉",
-    "🧨",
-    "🙌",
-    "🥳",
-    "🎊",
-    "😍",
-    "💻",
-    "🚂",
-    "⚡",
-    "🔋",
-    "🌐",
-    "🎉",
-    "👾",
-    "🧠",
-    "🤜",
-    "🧙‍♀️",
-    "🧙",
-    "🧙‍♂️",
-    "🫂",
-    "🐝",
-    "🌱",
-    "🌈",
-    "💫",
-    "⭐️",
-    "🌟",
-    "✨",
-    "⚡️",
-    "☕️",
-    "🏆",
-    "🎯",
-    "🎇",
-    "🎆",
-    "💡",
-    "💯",
-    "❗️",
-    "❕",
-  ];
+const PrevItems = ({ prevItems }) => {
   return (
-    <ul className="w-full h-full inline	text-left break-all pl-2 bg-neutral-900">
-      {prevItems.map((item, index) => (
-        <>
+    <div className="bg-neutral-900 h-full w-full flex flex-col overflow-hidden	truncate">
+      <ul className="w-ful p-2 text-right inline truncate">
+        {prevItems.map((item, index) => (
           <li
             key={`item-${index}`}
-            className="text-xl inline leading-none tracking-widest text-neutral-300"
+            className="text-3xl text-neutral-100 inline px-2 "
+          >
+            {item.emoji}
+          </li>
+        ))}
+      </ul>
+      <ul className="w-full h-14 py-2 truncate border-2 border-white overflow-hidden	">
+        {prevItems.map((item, index) => (
+          <li
+            key={`item-${index}`}
+            className="text-xl text-neutral-100 inline font-semibold px-1"
           >
             {item.input} {item.emoji}
           </li>
-        </>
-      ))}
-    </ul>
+        ))}
+      </ul>
+    </div>
   );
 };
 export default PrevItems;
