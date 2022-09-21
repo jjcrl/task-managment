@@ -47,3 +47,7 @@ h1 {
   font-family: Satoshi;
   font-weight: 700;
 }
+
+#rounded {
+  border-radius: 100%;
+}
