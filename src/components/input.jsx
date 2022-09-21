@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Input = ({ setCurrItems, dateChoice, view }) => {
+const Input = ({ setCurrItems, dateChoice }) => {
   const [input, setInput] = useState();
   const [toggle, setToggle] = useState(false);
 
@@ -70,7 +70,7 @@ const Input = ({ setCurrItems, dateChoice, view }) => {
       ...currItems,
       {
         input: input,
-        important: toggle,
+        priority: toggle,
         emoji,
         dateChoice: dateChoice ? dateChoice : "day-1",
         id: currItems.length,
@@ -87,10 +87,6 @@ const Input = ({ setCurrItems, dateChoice, view }) => {
     }
   };
 
-  const handleChange = (e) => {
-    setToggle(!toggle);
-  };
-
   return (
     <>
       <div className="bg-yellow-50 py-3 text-yellow-400 font-bold tracking-wider ">
@@ -105,13 +101,13 @@ const Input = ({ setCurrItems, dateChoice, view }) => {
           type="text"
           onKeyDown={onEnterPress}
         />{" "}
-        <div className="flex flex-row absolute w-min left-96 top-36 pt-2 justify-end">
+        <div className="absolute top-36 left-80">
           <input
             type="checkbox"
             id="important"
-            className="w-10 h-10"
-            onChange={(e) => {
-              handleChange(e);
+            className="w-12 h-12"
+            onChange={() => {
+              setToggle(true);
             }}
             checked={toggle}
           />
