@@ -60,15 +60,15 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
   return (
     <div
       className={
-        item.important
-          ? "w-fit h-auto bg-pink-50 relative m-2"
-          : "w-fit h-auto bg-neutral-50 relative m-2"
+        item.priority
+          ? "w-fit h-auto text-red-200 relative m-2"
+          : "w-fit h-auto text-green-200 relative m-2"
       }
       key={`item-${index}`}
     >
       {hoverItem}
 
-      <li className="w-full h-full text-left tracking-wider leading-none text-xl text-black py-2 px-1 font-semibold first-letter:uppercase ">
+      <li className="w-fit h-full text-left tracking-wider leading-none text-xl p-2 font-semibold first-letter:uppercase ">
         {item.input}
       </li>
     </div>
