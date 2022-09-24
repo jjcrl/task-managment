@@ -42,12 +42,59 @@
 }
 
 h1 {
-  font-size: 3em;
-  color: red;
+  font-size: 2rem;
+  color: white;
   font-family: Satoshi;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 1px;
+  opacity: 85%;
 }
 
 #rounded {
   border-radius: 100%;
+}
+
+button {
+  background-color: transparent;
+  letter-spacing: 2px;
+  font-style: italic;
+  margin: 0;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: left;
+}
+
+li {
+  letter-spacing: 2px;
+}
+
+li:nth-child(1) {
+  opacity: 100%;
+}
+
+li:nth-child(2) {
+  opacity: 80%;
+}
+
+li:nth-child(3) {
+  opacity: 60%;
+}
+
+li:nth-child(4) {
+  opacity: 40%;
+}
+
+li:nth-child(5) {
+  opacity: 20%;
+}
+
+li:nth-child(6) {
+  opacity: 20%;
+}
+
+li:nth-child(7) {
+  opacity: 20%;
 }
