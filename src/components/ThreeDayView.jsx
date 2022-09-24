@@ -6,26 +6,60 @@ const ThreeDayView = ({
   setPrevItems,
   setDateChoice,
   dateChoice,
+  today,
 }) => {
+  const dayone = today
+    .toLocaleDateString("en-US", {
+      weekday: "long",
+      day: "numeric",
+    })
+    .slice(0, 6)
+    .split(" ")
+    .reverse()
+    .join("")
+    .toUpperCase();
+
+  const daytwo = new Date(today.getTime() + 60 * 60 * 24 * 1000)
+    .toLocaleDateString("en-US", {
+      weekday: "long",
+      day: "numeric",
+    })
+    .slice(0, 6)
+    .split(" ")
+    .reverse()
+    .join("")
+    .toUpperCase();
+
+  const daythree = new Date(today.getTime() + 60 * 60 * 48 * 1000)
+    .toLocaleDateString("en-US", {
+      weekday: "long",
+      day: "numeric",
+    })
+    .slice(0, 6)
+    .split(" ")
+    .reverse()
+    .join("")
+    .toUpperCase();
+
   return (
-    <div className="h-full w-full grid grid-rows-1 grid-cols-3">
+    <div className="h-full w-full grid grid-rows-1 grid-cols-3 bg-gray-900 pt-5">
       <div
         className={
           dateChoice === "day-1"
-            ? "flex flex-col bg-neutral-900 m-1 gap-5 text-white"
-            : "flex flex-col bg-neutral-900 m-1 gap-5"
+            ? "flex flex-col bg-gray-900 m-1 gap-5"
+            : "flex flex-col bg-gray-900 m-1 gap-5"
         }
         onClick={() => {
           setDateChoice("day-1");
         }}
       >
-        <p className="text-2xl pt-5 font-bold">DAY ONE</p>
+        <h1>{dayone}</h1>
         {
           <CurrItems
             currItems={currItems.filter((item) => item.dateChoice === "day-1")}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-fit w-fit flex flex-col gap-5"
+            classTest="h-fit w-fit flex flex-col gap-5 mx-2"
             day="day-1"
           />
         }
@@ -33,15 +67,15 @@ const ThreeDayView = ({
       <div
         className={
           dateChoice === "day-2"
-            ? "flex flex-col bg-neutral-900 m-1 gap-5 text-white"
-            : "flex flex-col bg-neutral-900 m-1 gap-5"
+            ? "flex flex-col bg-gray-900 m-1 gap-5 mx-2"
+            : "flex flex-col bg-gray-900 m-1 gap-5 mx-2"
         }
         onClick={() => {
           setDateChoice("day-2");
         }}
       >
         {" "}
-        <p className="text-2xl pt-5 font-bold">DAY TWO</p>
+        <h1>{daytwo}</h1>
         {
           <CurrItems
             currItems={currItems.filter((item) => item.dateChoice === "day-2")}
@@ -55,15 +89,15 @@ const ThreeDayView = ({
       <div
         className={
           dateChoice === "day-3"
-            ? "flex flex-col bg-neutral-900 m-1 gap-5 text-white"
-            : "flex flex-col bg-neutral-900 m-1 gap-5"
+            ? "flex flex-col bg-gray-900 m-1 gap-5 text-white"
+            : "flex flex-col bg-gray-900 m-1 gap-5"
         }
         onClick={() => {
           setDateChoice("day-3");
         }}
       >
         {" "}
-        <p className="text-2xl pt-5 font-bold">DAY THREE</p>{" "}
+        <h1>{daythree}</h1>{" "}
         {
           <CurrItems
             currItems={currItems.filter((item) => item.dateChoice === "day-3")}
