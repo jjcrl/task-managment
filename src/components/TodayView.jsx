@@ -1,8 +1,8 @@
 import CurrItems from "./CurrItems";
 const TodayView = ({ currItems, setCurrItems, setPrevItems, today }) => {
   return (
-    <div className="h-full w-full p-2 bg-gray-900 pt-5">
-      <h1>
+    <div className="h-full w-full p-2 bg-yellow-50 pt-5">
+      <h1 className="text-yellow-300 w-full text-left ml-5">
         {today
           .toLocaleDateString("en-US", {
             weekday: "long",
