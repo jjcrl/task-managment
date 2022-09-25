@@ -58,17 +58,13 @@ button {
   background-color: transparent;
   letter-spacing: 2px;
   font-style: italic;
-  margin: 0;
-  padding: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
   font-weight: bold;
-  font-size: 2rem;
-  text-align: left;
+  font-size: 1rem;
 }
 
 li {
-  letter-spacing: 2px;
+  letter-spacing: 0.1rem;
+  line-height: 10px;
 }
 
 li:nth-child(1) {
@@ -77,24 +73,30 @@ li:nth-child(1) {
 
 li:nth-child(2) {
   opacity: 80%;
+  transform: scale(0.95);
 }
 
 li:nth-child(3) {
   opacity: 60%;
+  transform: scale(0.95);
 }
 
 li:nth-child(4) {
   opacity: 40%;
+  transform: scale(0.9);
 }
 
 li:nth-child(5) {
   opacity: 20%;
+  transform: scale(0.85);
 }
 
 li:nth-child(6) {
   opacity: 20%;
+  transform: scale(0.8);
 }
 
 li:nth-child(7) {
   opacity: 20%;
+  transform: scale(0.7.5);
 }
