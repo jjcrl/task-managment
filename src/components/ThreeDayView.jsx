@@ -42,24 +42,24 @@ const ThreeDayView = ({
     .toUpperCase();
 
   return (
-    <div className="h-full w-full grid grid-rows-1 grid-cols-3 bg-gray-900 pt-5">
+    <div className="h-full w-full grid grid-rows-1 grid-cols-3 bg-stone-50">
       <div
         className={
           dateChoice === "day-1"
-            ? "flex flex-col bg-gray-900 m-1 gap-5"
-            : "flex flex-col bg-gray-900 m-1 gap-5"
+            ? "flex flex-col gap-5 bg-stone-100"
+            : "flex flex-col gap-5"
         }
         onClick={() => {
           setDateChoice("day-1");
         }}
       >
-        <h1>{dayone}</h1>
+        <h2 className="text-stone-700">{dayone}</h2>
         {
           <CurrItems
             currItems={currItems.filter((item) => item.dateChoice === "day-1")}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-fit w-fit flex flex-col gap-5 mx-2"
+            classTest="h-full w-full flex flex-col gap-8 px-3"
             day="day-1"
           />
         }
@@ -67,21 +67,21 @@ const ThreeDayView = ({
       <div
         className={
           dateChoice === "day-2"
-            ? "flex flex-col bg-gray-900 m-1 gap-5 mx-2"
-            : "flex flex-col bg-gray-900 m-1 gap-5 mx-2"
+            ? "flex flex-col gap-5 bg-stone-100"
+            : "flex flex-col gap-5 "
         }
         onClick={() => {
           setDateChoice("day-2");
         }}
       >
         {" "}
-        <h1>{daytwo}</h1>
+        <h2 className="text-stone-700">{daytwo}</h2>
         {
           <CurrItems
             currItems={currItems.filter((item) => item.dateChoice === "day-2")}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-fit w-fit flex flex-col gap-5 p-2"
+            classTest="h-fit w-fit flex flex-col gap-8 px-3"
             day="day-2"
           />
         }
@@ -89,21 +89,21 @@ const ThreeDayView = ({
       <div
         className={
           dateChoice === "day-3"
-            ? "flex flex-col bg-gray-900 m-1 gap-5 text-white"
-            : "flex flex-col bg-gray-900 m-1 gap-5"
+            ? "flex flex-col gap-5 bg-stone-100"
+            : "flex flex-col gap-5"
         }
         onClick={() => {
           setDateChoice("day-3");
         }}
       >
         {" "}
-        <h1>{daythree}</h1>{" "}
+        <h2 className="text-stone-700">{daythree}</h2>{" "}
         {
           <CurrItems
             currItems={currItems.filter((item) => item.dateChoice === "day-3")}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-fit w-fit flex flex-col gap-5 p-2"
+            classTest="h-fit w-fit flex flex-col gap-8 px-3"
             day="day-3"
           />
         }
