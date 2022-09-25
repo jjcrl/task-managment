@@ -1,8 +1,24 @@
 import CurrItems from "./CurrItems";
-const TodayView = ({ currItems, setCurrItems, setPrevItems, today }) => {
+const TodayView = ({
+  currItems,
+  setCurrItems,
+  setPrevItems,
+  today,
+  dateChoice,
+  setDateChoice,
+}) => {
   return (
-    <div className="h-full w-full p-2 bg-yellow-50 pt-5">
-      <h1 className="text-yellow-300 w-full text-left ml-5">
+    <div
+      className={
+        dateChoice === "day-1"
+          ? "h-full w-full bg-stone-100"
+          : "h-full w-full bg-stone-50"
+      }
+      onClick={() => {
+        setDateChoice("day-1");
+      }}
+    >
+      <h2 className="text-stone-700 w-full text-left ml-5">
         {today
           .toLocaleDateString("en-US", {
             weekday: "long",
@@ -13,7 +29,7 @@ const TodayView = ({ currItems, setCurrItems, setPrevItems, today }) => {
           .reverse()
           .join("")
           .toUpperCase()}
-      </h1>
+      </h2>
       <CurrItems
         currItems={currItems}
         setCurrItems={setCurrItems}
