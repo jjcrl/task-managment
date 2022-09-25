@@ -5,7 +5,7 @@ const Input = ({ setCurrItems, dateChoice }) => {
   const [toggle, setToggle] = useState(false);
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    setInput("");
   };
 
   const emojiArr = [
@@ -89,19 +89,19 @@ const Input = ({ setCurrItems, dateChoice }) => {
 
   return (
     <>
-      <div className="bg-yellow-50 py-3 text-yellow-400 font-bold tracking-wider ">
-        <p>prompt</p>
+      <div className="bg-yellow-300 py-2 text-yellow-500 font-bold  text-left pl-2 tracking-wider w-full truncate inline">
+        <p>prompt: items should be less than 10 words.</p>
       </div>
       <form onSubmit={handleSubmit}>
         <textarea
           onChange={(e) => setInput(e.target.value)}
           value={input}
-          className="w-full h-40 text-4xl m-auto p-5 resize-none"
+          className="w-full h-48 text-4xl m-auto p-5 resize-none text-yellow-800"
           placeholder="What do you have to do?"
           type="text"
           onKeyDown={onEnterPress}
         />{" "}
-        <div className="absolute top-36 left-80">
+        <div className="absolute top-40 left-96 -m-2">
           <input
             type="checkbox"
             id="important"

@@ -1,10 +1,11 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
-import Input from "./components/input";
+import React, { useState } from "react";
+import Input from "./components/Input";
 import PrevItems from "./components/PrevItems";
 import TodayView from "./components/TodayView";
 import ThreeDayView from "./components/ThreeDayView";
 import WeekView from "./components/WeekView";
+import Navigation from "./components/Navigation";
 
 function App() {
   const [currItems, setCurrItems] = useState([
@@ -285,32 +286,9 @@ function App() {
 
   return (
     <div className="App">
-      <div className="h-fit w-fit text-yellow-400 absolute right-10 bottom-10">
-        <nav className="flex flex-col w-fit h-fit">
-          <button
-            onClick={() => {
-              setView("today");
-            }}
-          >
-            one
-          </button>
-          <button
-            onClick={() => {
-              setView("three-day");
-            }}
-          >
-            thr33
-          </button>
-          <button
-            onClick={() => {
-              setView("week");
-            }}
-          >
-            se7en
-          </button>
-        </nav>
-      </div>
       <main>
+        <Navigation setView={setView} />
+
         <section className="w-1/3 h-screen flex flex-col bg-stone-200">
           <Input
             currItems={currItems}
@@ -318,12 +296,12 @@ function App() {
             dateChoice={dateChoice}
             view={view}
           />
-
-          <div className="flex flex-row w-full justify-end text-6xl text-stone-500 font-black tracking-widest px-8 pb-4 pt-4 opacity-90">
+          <div className="flex flex-row w-min text-6xl text-stone-500 px-7 py-5">
             <h1>{percent ? `${percent}%` : "0%"}</h1>
           </div>
 
           <PrevItems prevItems={prevItems} />
+
           <u className="text-yellow-300 px-8 py-2">jsph.online</u>
         </section>
 

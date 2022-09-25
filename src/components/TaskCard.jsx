@@ -68,7 +68,7 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
     >
       {hoverItem}
       <span
-        className="h-7 w-7 bg-yellow-300 opacity-80 border-2 border-yellow-200"
+        className="h-8 w-8 bg-yellow-300 opacity-80 border-2 border-yellow-200 my-auto"
         id="rounded"
       ></span>
       <li className="w-fit h-full text-left text-lg py-2 px-3 m-0 font-semibold first-letter:uppercase rounded-2xl bg-yellow-300 leading-none border-2 border-yellow-200">
