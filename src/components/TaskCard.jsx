@@ -21,18 +21,18 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
   };
 
   const hoverItem = (
-    <div className="flex flex-row opacity-95 bg-none">
+    <div className="flex flex-row">
       <div
         className={
           toggleR
-            ? "w-fit h-full absolute top-0 right-0 grid items-center bg-none opacity-1"
-            : "w-fit h-full absolute top-0 right-0 grid items-center bg-none opacity-0"
+            ? "w-1/2 h-full top-0 right-0 rounded-2xl opacity-100 absolute z-10"
+            : "w-1/2 h-full top-0 right-0 rounded-2xl opacity-0 absolute z-10"
         }
         onMouseEnter={handleRHover}
         onMouseLeave={handleRHoverLeave}
       >
         <button
-          className="m-0 p-0 grid items-center bg-red-500 mr-2"
+          className="bg-rose-500 h-full w-full rounded-r-2xl text-rose-700 grid items-center text-xl font-black"
           onClick={() => removeItem(item.id)}
         >
           delete
@@ -43,12 +43,12 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
         onMouseLeave={handleLHoverLeave}
         className={
           toggleL
-            ? "w-fit h-full absolute inset-0 grid items-center bg-none opacity-1"
-            : "w-fit h-full absolute inset-0  grid items-center bg-none opacity-0"
+            ? "w-1/2 h-full absolute inset-0 bg-none opacity-100 z-10"
+            : "w-1/2 h-fit absolute inset-0  bg-none opacity-0 z-10"
         }
       >
         <button
-          className="m-auto p-0 grid items-center bg-green-500 ml-2"
+          className="bg-lime-600 w-full h-full rounded-l-2xl text-lime-700 grid items-center text-xl font-black"
           onClick={() => updateItem(item.id)}
         >
           done
@@ -61,14 +61,17 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
     <div
       className={
         item.priority
-          ? "w-fit h-auto text-red-200 relative m-2"
-          : "w-fit h-auto text-green-200 relative m-2"
+          ? "w-full h-fit relative text-rose-800  rounded-2xl mb-2 flex gap-1"
+          : "w-full h-fit relative text-yellow-900 rounded-2xl mb-2 flex gap-1 "
       }
       key={`item-${index}`}
     >
       {hoverItem}
-
-      <li className="w-fit h-full text-left tracking-wider leading-none text-xl p-2 font-semibold first-letter:uppercase ">
+      <span
+        className="h-7 w-7 bg-yellow-300 opacity-80 border-2 border-yellow-200"
+        id="rounded"
+      ></span>
+      <li className="w-fit h-full text-left text-lg py-2 px-3 m-0 font-semibold first-letter:uppercase rounded-2xl bg-yellow-300 leading-none border-2 border-yellow-200">
         {item.input}
       </li>
     </div>
