@@ -40,96 +40,157 @@ const WeekView = ({
   const dayseven = new Date(today.getTime() + 60 * 60 * 148 * 1000);
 
   return (
-    <div className="h-full w-full grid grid-cols-4 auto-rows-auto bg-gray-900 p-2 pt-5">
-      <div className="h-full w-full">
-        <h1>{dayone}</h1>
+    <div className="h-full w-full grid grid-cols-4 auto-rows-auto bg-stone-50">
+      <div
+        className={
+          dateChoice === "day-1"
+            ? "h-full w-full bg-stone-100 flex flex-col"
+            : "h-full w-full bg-stone-50 flex flex-col"
+        }
+        onClick={() => {
+          setDateChoice("day-1");
+        }}
+      >
+        <h2 className="text-stone-700">{dayone}</h2>
         {
           <CurrItems
             currItems={currItems.filter((item) => item.dateChoice === "day-1")}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-min w-fit"
+            classTest="h-full w-full flex flex-col"
             day="day-1"
             mini={true}
           />
         }
       </div>
-      <div className="h-full w-full">
-        <h1>{formateDate(daytwo)}</h1>
+      <div
+        className={
+          dateChoice === "day-2"
+            ? "h-full w-full bg-stone-100 flex flex-col"
+            : "h-full w-full bg-stone-50 flex flex-col"
+        }
+        onClick={() => {
+          setDateChoice("day-2");
+        }}
+      >
+        <h2 className="text-stone-700">{formateDate(daytwo)}</h2>
         {
           <CurrItems
             currItems={currItems.filter((item) => item.dateChoice === "day-2")}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-min w-fit flex flex-col border-2 border-black"
+            classTest="h-full w-full flex flex-col"
             day="day-2"
             mini={true}
           />
         }
       </div>{" "}
-      <div className="h-full w-full">
-        <h1>{formateDate(daythree)}</h1>
+      <div
+        className={
+          dateChoice === "day-3"
+            ? "h-full w-full bg-stone-100 flex flex-col"
+            : "h-full w-full bg-stone-50 flex flex-col"
+        }
+        onClick={() => {
+          setDateChoice("day-3");
+        }}
+      >
+        <h2 className="text-stone-700">{formateDate(daythree)}</h2>
         {
           <CurrItems
             currItems={currItems.filter((item) => item.dateChoice === "day-3")}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             mini={true}
-            classTest="h-min w-fit flex flex-col border-2 border-black"
+            classTest="h-full w-full flex flex-col "
             day="day-3"
           />
         }
       </div>{" "}
-      <div className="h-full w-full">
-        <h1>{formateDate(dayfour)}</h1>
+      <div
+        className={
+          dateChoice === "day-4"
+            ? "h-full w-full bg-stone-100 flex flex-col"
+            : "h-full w-full bg-stone-50 flex flex-col"
+        }
+        onClick={() => {
+          setDateChoice("day-4");
+        }}
+      >
+        <h2 className="text-stone-700">{formateDate(dayfour)}</h2>
         {
           <CurrItems
-            currItems={currItems.filter(
-              (item) => item.dateChoice === "day-1day-4"
-            )}
+            currItems={currItems.filter((item) => item.dateChoice === "day-4")}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-min w-fit flex flex-col border-2 border-black"
+            classTest="h-full w-full flex flex-col"
             day="day-4"
             mini={true}
           />
         }
       </div>{" "}
-      <div className="h-full w-full">
-        <h1>{formateDate(dayfive)}</h1>
+      <div
+        className={
+          dateChoice === "day-5"
+            ? "h-full w-full bg-stone-100 flex flex-col"
+            : "h-full w-full bg-stone-50 flex flex-col"
+        }
+        onClick={() => {
+          setDateChoice("day-5");
+        }}
+      >
+        <h2 className="text-stone-700">{formateDate(dayfive)}</h2>
         {
           <CurrItems
             currItems={currItems.filter((item) => item.dateChoice === "day-5")}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-min w-fit flex flex-col border-2 border-black"
+            classTest="h-full w-full flex flex-col"
             day="day-5"
             mini={true}
           />
         }
       </div>{" "}
-      <div className="h-full w-full">
-        <h1>{formateDate(daysix)}</h1>
+      <div
+        className={
+          dateChoice === "day-6"
+            ? "h-full w-full bg-stone-100 flex flex-col"
+            : "h-full w-full bg-stone-50 flex flex-col"
+        }
+        onClick={() => {
+          setDateChoice("day-6");
+        }}
+      >
+        <h2 className="text-stone-700">{formateDate(daysix)}</h2>
 
         {
           <CurrItems
-            currItems={currItems.filter((item) => item.dateChoice === "day-")}
+            currItems={currItems.filter((item) => item.dateChoice === "day-6")}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-min w-fit flex flex-col border-2 border-black"
+            classTest="h-full w-full flex flex-col"
             day="day-6"
             mini={true}
           />
         }
       </div>{" "}
-      <div className="h-full w-full">
-        <h1>{formateDate(dayseven)}</h1>
+      <div
+        className={
+          dateChoice === "day-7"
+            ? "h-full w-full bg-stone-100 flex flex-col"
+            : "h-full w-full bg-stone-50 flex flex-col"
+        }
+        onClick={() => {
+          setDateChoice("day-7");
+        }}
+      >
+        <h2 className="text-stone-700">{formateDate(dayseven)}</h2>
         {
           <CurrItems
             currItems={currItems.filter((item) => item.dateChoice === "day-7")}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-min w-fit flex flex-col border-2 border-black"
+            classTest="h-full w-full flex flex-col"
             day="day-7"
             mini={true}
           />
