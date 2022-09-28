@@ -44,7 +44,7 @@ const WeekView = ({
         <h2 className="text-stone-700">{formatDate(today)}</h2>
         {
           <CurrItems
-            currItems={currItems.filter((item) => item.dateChoice === "day-1")}
+            currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"
@@ -66,7 +66,7 @@ const WeekView = ({
         <h2 className="text-stone-700">{formatDate(daytwo)}</h2>
         {
           <CurrItems
-            currItems={currItems.filter((item) => item.dateChoice === "day-2")}
+            currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"
@@ -88,7 +88,7 @@ const WeekView = ({
         <h2 className="text-stone-700">{formatDate(daythree)}</h2>
         {
           <CurrItems
-            currItems={currItems.filter((item) => item.dateChoice === "day-3")}
+            currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             mini={true}
@@ -110,7 +110,7 @@ const WeekView = ({
         <h2 className="text-stone-700">{formatDate(dayfour)}</h2>
         {
           <CurrItems
-            currItems={currItems.filter((item) => item.dateChoice === "day-4")}
+            currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"
@@ -132,7 +132,7 @@ const WeekView = ({
         <h2 className="text-stone-700">{formatDate(dayfive)}</h2>
         {
           <CurrItems
-            currItems={currItems.filter((item) => item.dateChoice === "day-5")}
+            currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"
@@ -155,7 +155,7 @@ const WeekView = ({
 
         {
           <CurrItems
-            currItems={currItems.filter((item) => item.dateChoice === "day-6")}
+            currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"
@@ -177,7 +177,7 @@ const WeekView = ({
         <h2 className="text-stone-700">{formatDate(dayseven)}</h2>
         {
           <CurrItems
-            currItems={currItems.filter((item) => item.dateChoice === "day-7")}
+            currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"

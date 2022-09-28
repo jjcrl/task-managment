@@ -40,7 +40,7 @@ const ThreeDayView = ({
         <h2 className="text-stone-700">{formatDate(today)}</h2>
         {
           <CurrItems
-            currItems={currItems.filter((item) => item.dateChoice === "day-1")}
+            currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-fit flex flex-col gap-6 px-5"
@@ -62,7 +62,7 @@ const ThreeDayView = ({
         <h2 className="text-stone-700">{formatDate(daytwo)}</h2>
         {
           <CurrItems
-            currItems={currItems.filter((item) => item.dateChoice === "day-2")}
+            currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-fit flex flex-col gap-6 px-5"
@@ -84,7 +84,7 @@ const ThreeDayView = ({
         <h2 className="text-stone-700">{formatDate(daythree)}</h2>{" "}
         {
           <CurrItems
-            currItems={currItems.filter((item) => item.dateChoice === "day-3")}
+            currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-fit flex flex-col gap-6 px-5"
