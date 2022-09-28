@@ -89,15 +89,15 @@ const Input = ({ setCurrItems, dateChoice }) => {
 
   return (
     <>
-      <div className="bg-yellow-300 py-2 text-yellow-500 font-bold  text-left pl-2 tracking-wider w-full truncate inline">
-        <p>prompt...</p>
+      <div className="bg-yellow-300 text-yellow-500 text-left py-2 inline pl-2">
+        <h6>prompt...</h6>
       </div>
       <form onSubmit={handleSubmit}>
         <textarea
           onChange={(e) => setInput(e.target.value)}
           value={input}
-          className="w-full h-40 text-3xl m-auto p-2 resize-none text-stone-900"
-          placeholder="What do you have to do?"
+          className="w-full h-40 text-4xl m-auto p-2 resize-none text-stone-900"
+          placeholder="What do you have to do ?"
           type="text"
           onKeyDown={onEnterPress}
         />{" "}
