@@ -1,29 +1,26 @@
 const Navigation = ({ setView }) => {
   return (
-    <nav className="w-min h-min flex flex-row absolute right-10 bottom-10">
+    <nav className="w-min h-min flex flex-row bg-stone-200 justify-end gap-5 px-3 py-3 text-yellow-500 absolute right-10 bottom-10">
       <button
         onClick={() => {
           setView("today");
         }}
-        className="bg-stone-400 rounded-l-2xl px-4"
       >
-        one
+        1
       </button>
       <button
         onClick={() => {
           setView("three-day");
         }}
-        className="bg-stone-400"
       >
-        thr33
+        3
       </button>
       <button
         onClick={() => {
           setView("week");
         }}
-        className="bg-stone-400 rounded-r-2xl px-4"
       >
-        se7en
+        7
       </button>
     </nav>
   );
