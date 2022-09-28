@@ -226,7 +226,10 @@ function App() {
   const [dateChoice, setDateChoice] = useState();
 
   const percent = Math.floor(
-    (prevItems.length / (currItems.length + prevItems.length)) * 100
+    (prevItems.filter((item) => item.dateChoice === "day-1").length /
+      (currItems.filter((item) => item.dateChoice === "day-1").length +
+        prevItems.filter((item) => item.dateChoice === "day-1").length)) *
+      100
   );
 
   const today = new Date();
