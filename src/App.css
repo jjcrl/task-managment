@@ -72,11 +72,12 @@ button {
   font-weight: 800;
   font-size: 1rem;
   padding: 5px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
   border: solid 2px grey;
   background-color: grey;
   color: whitesmoke;
+  width: max-content;
 }
 
 button:active {
