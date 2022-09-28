@@ -16,7 +16,7 @@ const PrevItems = ({ prevItems }) => {
         <ul className="w-full h-fit flex flex-row-reverse">
           {emojis.map((item, index) => (
             <li
-              key={`item-${index}`}
+              key={`emoji-${index}`}
               className="text-3xl inline bg-white h-16 w-16 grid items-center border-2 border-stone-500"
               id={`emoji-item-${index}`}
             >
@@ -28,10 +28,15 @@ const PrevItems = ({ prevItems }) => {
 
       <ul className="w-fit h-full m-auto pt-5">
         {items.map((item, index) => (
-          <div className="flex felx-row m-2" id={`prev-item-${index}`}>
+          <div
+            className="flex felx-row m-2"
+            id={`prev-item-${index}`}
+            key={`prev-item-${index}`}
+          >
             <li
               className="bg-lime-200 w-10 h-10 p-2 text-xl grid items-center mx-1 shadow-md"
               id="rounded"
+              key={`emoji-item-${index}`}
             >
               {item.emoji}
             </li>
