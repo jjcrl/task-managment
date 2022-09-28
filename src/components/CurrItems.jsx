@@ -52,7 +52,7 @@ const CurrItems = ({
   } else {
     return (
       <div className={classTest}>
-        <ul className="w-full h-full bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-1 pb-2 pt-5">
+        <ul className="w-full h-full bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-1 pb-2 pt-5 shadow-xl">
           {currItems.map((item, index) =>
             !item.priority && item.dateChoice === day ? (
               <TaskCard
@@ -65,7 +65,7 @@ const CurrItems = ({
           )}
         </ul>
 
-        <ul className="flex flex-col bg-yellow-200 h-full pt-5 px-4 m-auto rounded-2xl gap-1 pb-2 w-full">
+        <ul className="flex flex-col bg-yellow-200 h-full pt-5 px-4 m-auto rounded-2xl gap-1 pb-2 w-full mt-0 shadow-xl">
           {currItems.map((item, index) =>
             item.priority && item.dateChoice === day ? (
               <TaskCard

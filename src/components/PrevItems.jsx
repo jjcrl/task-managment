@@ -7,7 +7,7 @@ const PrevItems = ({ prevItems }) => {
       <div className="flex flex-row">
         <div className="m-auto pl-2">
           <span
-            className="bg-white w-16 h-16 pl-2 pr-3 text-3xl font-bold grid items-center border-2 border-stone-500 text-stone-800"
+            className="bg-yellow-50 w-16 h-16 pl-2 pr-3 text-3xl font-bold grid items-center border-2 border-yellow-300 text-yellow-400 shadow-md"
             id="rounded"
           >
             +{prevItems.length - 6}
@@ -53,7 +53,7 @@ const PrevItems = ({ prevItems }) => {
             height: 5rem;
             z-index: 100;
             border-radius: 100%;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
           }
 
           #emoji-item-1 {
