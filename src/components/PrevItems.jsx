@@ -10,7 +10,7 @@ const PrevItems = ({ prevItems }) => {
             className="bg-yellow-50 w-16 h-16 pl-2 pr-3 text-3xl font-bold grid items-center border-2 border-yellow-300 text-yellow-400 shadow-md"
             id="rounded"
           >
-            +{prevItems.length - 6}
+            +{prevItems.length > 6 ? prevItems.length - 6 : prevItems.length}
           </span>
         </div>
         <ul className="w-full h-fit flex flex-row-reverse">
