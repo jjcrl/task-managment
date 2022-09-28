@@ -11,8 +11,8 @@ const TodayView = ({
     <div
       className={
         dateChoice === "day-1"
-          ? "h-full w-full bg-stone-100"
-          : "h-full w-full bg-stone-50"
+          ? "h-full w-full bg-stone-300"
+          : "h-full w-full bg-stone-100"
       }
       onClick={() => {
         setDateChoice("day-1");
@@ -34,7 +34,7 @@ const TodayView = ({
         currItems={currItems}
         setCurrItems={setCurrItems}
         setPrevItems={setPrevItems}
-        classTest="h-fit w-fit flex flex-row gap-5 m-auto justify-between mt-5"
+        classTest="h-fit w-fit flex flex-col gap-5 m-auto justify-between mt-10"
         day="day-1"
       />
     </div>

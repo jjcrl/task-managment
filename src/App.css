@@ -62,46 +62,18 @@ h2 {
 
 button {
   letter-spacing: 4px;
-  font-style: italic;
   font-weight: 800;
   font-size: 1rem;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: solid 2px grey;
+  background-color: grey;
+  color: whitesmoke;
 }
 
 button:active {
   color: whitesmoke;
-}
-
-li {
-  letter-spacing: 0.1rem;
-  line-height: 10px;
-}
-
-li:nth-child(1) {
-  opacity: 100%;
-}
-
-li:nth-child(2) {
-  opacity: 80%;
-}
-
-li:nth-child(3) {
-  opacity: 60%;
-}
-
-li:nth-child(4) {
-  opacity: 40%;
-}
-
-li:nth-child(5) {
-  opacity: 20%;
-}
-
-li:nth-child(6) {
-  opacity: 20%;
-}
-
-li:nth-child(7) {
-  opacity: 20%;
 }
 
 u {

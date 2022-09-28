@@ -90,22 +90,22 @@ const Input = ({ setCurrItems, dateChoice }) => {
   return (
     <>
       <div className="bg-yellow-300 py-2 text-yellow-500 font-bold  text-left pl-2 tracking-wider w-full truncate inline">
-        <p>prompt: items should be less than 10 words.</p>
+        <p>prompt...</p>
       </div>
       <form onSubmit={handleSubmit}>
         <textarea
           onChange={(e) => setInput(e.target.value)}
           value={input}
-          className="w-full h-48 text-4xl m-auto p-5 resize-none text-yellow-800"
+          className="w-full h-40 text-3xl m-auto p-2 resize-none text-stone-900"
           placeholder="What do you have to do?"
           type="text"
           onKeyDown={onEnterPress}
         />{" "}
-        <div className="absolute top-40 left-96 -m-2">
+        <div className="absolute top-36 left-80 -ml-2">
           <input
             type="checkbox"
             id="important"
-            className="w-12 h-12"
+            className="w-10 h-10"
             onChange={() => {
               setToggle(true);
             }}

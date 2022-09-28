@@ -289,23 +289,20 @@ function App() {
       <main>
         <Navigation setView={setView} />
 
-        <section className="w-1/3 h-screen flex flex-col bg-stone-200">
+        <section className="w-1/4 h-screen flex flex-col bg-stone-100">
           <Input
             currItems={currItems}
             setCurrItems={setCurrItems}
             dateChoice={dateChoice}
             view={view}
           />
-          <div className="flex flex-row w-min text-6xl text-stone-500 px-7 py-5">
-            <h1>{percent ? `${percent}%` : "0%"}</h1>
+          <div className="w-min h-min text-6xl text-stone-500 ml-auto p-5">
+            <h2>{percent ? `${percent}%` : "0%"}</h2>
           </div>
-
           <PrevItems prevItems={prevItems} />
-
-          <u className="text-yellow-300 px-8 py-2">jsph.online</u>
         </section>
 
-        <section className="w-3/4 h-screen bg-stone-50">
+        <section className="w-3/4 h-screen">
           {view === "today" ? (
             <TodayView
               currItems={currItems}
