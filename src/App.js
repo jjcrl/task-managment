@@ -221,60 +221,7 @@ function App() {
     },
   ]);
   //_↗
-  const [prevItems, setPrevItems] = useState([
-    {
-      input: "Work on the previs items section.",
-      priority: true,
-
-      emoji: "💯",
-      dateChoice: "day-1",
-      id: 0,
-    },
-
-    {
-      input: "Fix the emoji list",
-      priority: true,
-
-      emoji: "🐝",
-      dateChoice: "day-1",
-      id: 1,
-    },
-
-    {
-      input: "Dispaly today in a better way with 2 lists",
-      priority: true,
-
-      emoji: "🏆",
-      dateChoice: "day-1",
-      id: 2,
-    },
-
-    {
-      input: "Add lists and views for 3 day ",
-      priority: false,
-
-      emoji: "🎉",
-      dateChoice: "day-1",
-      id: 3,
-    },
-    {
-      input: "Drag and drop abilites",
-      priority: false,
-
-      emoji: "💯",
-      dateChoice: "day-1",
-      id: 4,
-    },
-
-    {
-      input: "Local storage for user",
-      priority: false,
-
-      emoji: "⚡",
-      dateChoice: "day-1",
-      id: 5,
-    },
-  ]);
+  const [prevItems, setPrevItems] = useState([]);
   const [view, setView] = useState("today");
   const [dateChoice, setDateChoice] = useState();
 
