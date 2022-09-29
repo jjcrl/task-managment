@@ -61,8 +61,8 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
     <div
       className={
         item.priority
-          ? "w-fit h-fit relative text-rose-800  rounded-2xl mb-2 flex gap-1"
-          : "w-fit h-fit relative text-yellow-900 rounded-2xl mb-2 flex gap-1"
+          ? "w-full h-full relative text-rose-800  rounded-2xl mb-2 flex gap-1"
+          : "w-full h-full relative text-yellow-900 rounded-2xl mb-2 flex gap-1"
       }
       key={`list-item-${index}`}
     >

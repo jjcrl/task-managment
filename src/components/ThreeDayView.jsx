@@ -16,8 +16,8 @@ const ThreeDayView = ({
       <div
         className={
           dateChoice === "day-1"
-            ? "flex flex-col gap-5 bg-stone-300"
-            : "flex flex-col gap-5 bg-stone-100"
+            ? "flex flex-col gap-2 bg-stone-300"
+            : "flex flex-col gap-2 bg-stone-100"
         }
         onClick={() => {
           setDateChoice("day-1");
@@ -29,17 +29,17 @@ const ThreeDayView = ({
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-full w-fit flex flex-col gap-6 px-5 overflow-scroll"
+            classTest="h-fit w-full flex flex-col gap-6 px-6 mx-atuo overflow-scroll pb-10"
             day="day-1"
-            limit={4}
+            limit={3}
           />
         }
       </div>
       <div
         className={
           dateChoice === "day-2"
-            ? "flex flex-col gap-5 bg-stone-300"
-            : "flex flex-col gap-5 bg-stone-100"
+            ? "flex flex-col gap-2 bg-stone-300"
+            : "flex flex-col gap-2 bg-stone-100"
         }
         onClick={() => {
           setDateChoice("day-2");
@@ -52,17 +52,17 @@ const ThreeDayView = ({
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-fit w-fit flex flex-col gap-6 px-5"
+            classTest="h-fit w-full flex flex-col gap-6 px-6 mx-auto overflow-scroll pb-10"
             day="day-2"
-            limit={4}
+            limit={3}
           />
         }
       </div>{" "}
       <div
         className={
           dateChoice === "day-3"
-            ? "flex flex-col gap-5 bg-stone-300"
-            : "flex flex-col gap-5 bg-stone-100"
+            ? "flex flex-col gap-2 bg-stone-300"
+            : "flex flex-col gap-2 bg-stone-100"
         }
         onClick={() => {
           setDateChoice("day-3");
@@ -75,9 +75,9 @@ const ThreeDayView = ({
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-fit w-fit flex flex-col gap-6 px-5"
+            classTest="h-fit w-full flex flex-col gap-6 px-6 mx-auto overflow-scroll pb-10"
             day="day-3"
-            limit={4}
+            limit={3}
           />
         }
       </div>
