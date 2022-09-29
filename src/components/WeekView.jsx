@@ -36,6 +36,9 @@ const WeekView = ({
             classTest="h-fit w-full flex flex-col"
             day="day-1"
             mini={true}
+            date={formatDate(today)}
+            setDateChoice={setDateChoice}
+            dateChoice={dateChoice}
           />
         }
       </div>
@@ -58,6 +61,9 @@ const WeekView = ({
             classTest="h-fit w-full flex flex-col"
             day="day-2"
             mini={true}
+            date={formatDate(daytwo)}
+            setDateChoice={setDateChoice}
+            dateChoice={dateChoice}
           />
         }
       </div>{" "}
@@ -80,6 +86,9 @@ const WeekView = ({
             mini={true}
             classTest="h-fit w-full flex flex-col "
             day="day-3"
+            date={formatDate(daythree)}
+            setDateChoice={setDateChoice}
+            dateChoice={dateChoice}
           />
         }
       </div>{" "}
@@ -102,6 +111,9 @@ const WeekView = ({
             classTest="h-fit w-full flex flex-col"
             day="day-4"
             mini={true}
+            date={formatDate(dayfour)}
+            setDateChoice={setDateChoice}
+            dateChoice={dateChoice}
           />
         }
       </div>{" "}
@@ -124,6 +136,9 @@ const WeekView = ({
             classTest="h-fit w-full flex flex-col"
             day="day-5"
             mini={true}
+            date={formatDate(dayfive)}
+            setDateChoice={setDateChoice}
+            dateChoice={dateChoice}
           />
         }
       </div>{" "}
@@ -147,6 +162,9 @@ const WeekView = ({
             classTest="h-fit w-full flex flex-col"
             day="day-6"
             mini={true}
+            date={formatDate(daysix)}
+            setDateChoice={setDateChoice}
+            dateChoice={dateChoice}
           />
         }
       </div>{" "}
@@ -169,6 +187,9 @@ const WeekView = ({
             classTest="h-fit w-full flex flex-col"
             day="day-7"
             mini={true}
+            date={formatDate(dayseven)}
+            setDateChoice={setDateChoice}
+            dateChoice={dateChoice}
           />
         }
       </div>
