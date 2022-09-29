@@ -29,8 +29,9 @@ const ThreeDayView = ({
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-fit w-fit flex flex-col gap-6 px-5 overflow-scroll"
+            classTest="h-fit w-fit flex flex-col gap-6 px-5"
             day="day-1"
+            limit={4}
           />
         }
       </div>
@@ -53,6 +54,7 @@ const ThreeDayView = ({
             setPrevItems={setPrevItems}
             classTest="h-fit w-fit flex flex-col gap-6 px-5"
             day="day-2"
+            limit={4}
           />
         }
       </div>{" "}
@@ -75,6 +77,7 @@ const ThreeDayView = ({
             setPrevItems={setPrevItems}
             classTest="h-fit w-fit flex flex-col gap-6 px-5"
             day="day-3"
+            limit={4}
           />
         }
       </div>

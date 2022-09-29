@@ -11,8 +11,19 @@ const CurrItems = ({
   date,
   setDateChoice,
   dateChoice,
+  limit,
 }) => {
+  const condensedItems = currItems
+    .filter((item) => !item.priority && item.dateChoice === day)
+    .slice(0, limit);
+
+  const allItems = currItems.filter(
+    (item) => item.dateChoice === day && !item.priority
+  );
+
   const [expanded, setExpanded] = useState(false);
+  const [toggleItems, setToggleItems] = useState(false);
+  const [display, setDisplay] = useState("show");
 
   const updateItem = (id) => {
     const [item] = currItems.filter((item) => item.id === id);
@@ -28,6 +39,11 @@ const CurrItems = ({
     if (e.detail === 2) {
       setExpanded(!expanded);
     }
+  };
+
+  const handleExtendList = () => {
+    setToggleItems(!toggleItems);
+    display === "show" ? setDisplay("hide") : setDisplay("show");
   };
 
   const total = currItems.filter((item) => item.dateChoice === day).length;
@@ -112,16 +128,36 @@ const CurrItems = ({
     return (
       <div className={classTest}>
         <ul className="w-full h-full bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-1 pb-2 pt-5 shadow-xl">
-          {currItems.map((item, index) =>
-            !item.priority && item.dateChoice === day ? (
-              <TaskCard
-                item={item}
-                index={index}
-                removeItem={removeItem}
-                updateItem={updateItem}
-              />
-            ) : null
-          )}
+          {toggleItems === false
+            ? condensedItems.map((item, index) => (
+                <TaskCard
+                  item={item}
+                  index={index}
+                  removeItem={removeItem}
+                  updateItem={updateItem}
+                />
+              ))
+            : allItems.map((item, index) => (
+                <TaskCard
+                  item={item}
+                  index={index}
+                  removeItem={removeItem}
+                  updateItem={updateItem}
+                />
+              ))}
+
+          {currItems.filter((item) => item.dateChoice === day && !item.priority)
+            .length > 4 && limit ? (
+            <li
+              className="bg-yellow-100 w-fit rounded-3xl text-xl my-1 py-1 px-20 border-2 border-yellow-200 shadow-sm text-yellow-900 font-semibold"
+              onClick={(e) => handleExtendList(e)}
+            >
+              {display} +
+              {currItems.filter(
+                (item) => item.dateChoice === day && !item.priority
+              ).length - 4}{" "}
+            </li>
+          ) : null}
         </ul>
 
         <ul className="flex flex-col bg-yellow-200 h-full pt-5 px-4 m-auto rounded-2xl gap-1 pb-2 w-full mt-0 shadow-xl">
