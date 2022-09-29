@@ -238,7 +238,6 @@ function App() {
     <div className="App">
       <main>
         <Navigation setView={setView} />
-
         <section className="w-1/4 h-screen flex flex-col bg-stone-100">
           <Input
             currItems={currItems}

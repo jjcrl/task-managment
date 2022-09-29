@@ -29,7 +29,7 @@ const ThreeDayView = ({
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-fit w-fit flex flex-col gap-6 px-5"
+            classTest="h-fit w-fit flex flex-col gap-6 px-5 overflow-scroll"
             day="day-1"
           />
         }

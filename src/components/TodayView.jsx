@@ -23,8 +23,7 @@ const TodayView = ({
         {formatDate(today)}
       </h2>
 
-      <div className="rounded-2xl w-fit bg-stone-400 text-stone-50 flex flex-col ml-10 p-5 text-left px-7 shadow-md absolute top-10 right-10 ">
-        {" "}
+      <div className="rounded-2xl w-fit bg-stone-400 text-stone-50 flex flex-col ml-10 p-5 text-left px-7 shadow-md absolute top-5 right-5 border-2 border-stone-200">
         <h3>
           Total items{" "}
           {currItems.filter((item) => item.dateChoice === "day-1").length}
@@ -43,7 +42,7 @@ const TodayView = ({
         currItems={currItems}
         setCurrItems={setCurrItems}
         setPrevItems={setPrevItems}
-        classTest="h-fit w-full flex flex-row gap-8 m-auto justify-between mt-16 px-10"
+        classTest="h-fit w-fit flex flex-row gap-8 m-auto justify-between mt-16 px-10"
         day="day-1"
       />
     </div>

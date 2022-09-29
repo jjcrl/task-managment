@@ -1,15 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Input = ({ setCurrItems, dateChoice }) => {
   const [input, setInput] = useState();
   const [toggle, setToggle] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = () => {
     setInput("");
   };
 
   const emojiArr = [
-    "✅",
     "🚀",
     "🔧",
     "🔩",
@@ -19,7 +18,6 @@ const Input = ({ setCurrItems, dateChoice }) => {
     "🙌",
     "🥳",
     "🎊",
-    "✅",
     "🚀",
     "😍",
     "💻",
@@ -28,7 +26,6 @@ const Input = ({ setCurrItems, dateChoice }) => {
     "❗️",
     "⚡",
     "🔋",
-    "✅",
     "🚀",
     "🎉",
     "🧠",
@@ -38,13 +35,11 @@ const Input = ({ setCurrItems, dateChoice }) => {
     "🧙‍♂️",
     "🫂",
     "⚡",
-
     "🐝",
     "🌱",
     "🌈",
     "💫",
     "⚡",
-
     "⭐️",
     "🌟",
     "✨",
@@ -53,12 +48,10 @@ const Input = ({ setCurrItems, dateChoice }) => {
     "🏆",
     "🎯",
     "⚡",
-
     "🎇",
     "🎆",
     "💡",
     "💯",
-    "❗️",
     "⭐️",
     "🌟",
   ];
@@ -96,7 +89,7 @@ const Input = ({ setCurrItems, dateChoice }) => {
         <textarea
           onChange={(e) => setInput(e.target.value)}
           value={input}
-          className="w-full h-40 text-4xl m-auto p-2 resize-none text-stone-900"
+          className="w-full h-40 text-3xl m-auto p-2 resize-none text-stone-900"
           placeholder="What do you have to do ?"
           type="text"
           onKeyDown={onEnterPress}
@@ -111,6 +104,9 @@ const Input = ({ setCurrItems, dateChoice }) => {
             }}
             checked={toggle}
           />
+        </div>
+        <div className="absolute ml-2 top-40 -m-2 border-2 px-2 py-1 bg-stone-200 w-fit h-fit">
+          <p>tagging container</p>
         </div>
       </form>
     </>
