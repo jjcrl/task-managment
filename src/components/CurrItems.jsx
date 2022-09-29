@@ -82,17 +82,31 @@ const CurrItems = ({
       <div
         className={
           dateChoice === day
-            ? "h-full w-auto bg-stone-300 absolute right-0 top-0 z-10 left-1/4"
-            : "h-full w-auto bg-stone-100 absolute right-0 top-0 z-10 left-1/4"
+            ? "h-full w-auto bg-stone-300 absolute right-0 top-0 z-10 left-1/4 pt-5"
+            : "h-full w-auto bg-stone-100 absolute right-0 top-0 z-10 left-1/4 pt-5"
         }
         onClick={() => {
           setDateChoice("day");
         }}
       >
+        <div className="rounded-2xl w-fit bg-stone-400 text-stone-50 flex flex-col ml-10 p-5 text-left px-7 shadow-md absolute top-5 right-5 border-2 border-stone-200">
+          <h3>
+            Total items{" "}
+            {currItems.filter((item) => item.dateChoice === "day-1").length}
+          </h3>
+          <h3>
+            Priority items{" "}
+            {
+              currItems.filter(
+                (item) => item.dateChoice === "day-1" && item.priority
+              ).length
+            }
+          </h3>
+        </div>
         <h2 className=" text-stone-700 w-fit p-5">{date}</h2>
         <div className="w-full m-auto h-fit flex flex-row gap-8  p-10 relative px-20">
           <ul
-            className="w-full h-full bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-1 pb-2 pt-5 shadow-xl mt-0"
+            className="w-full h-full bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-1 pb-2 pt-5 shadow-xl mt-0 border-2 border-yellow-100"
             onClick={(e) => handleExpand(e)}
           >
             {currItems.map((item, index) =>
@@ -107,7 +121,7 @@ const CurrItems = ({
             )}
           </ul>
           <ul
-            className="flex flex-col bg-yellow-200 h-full pt-5 px-4 m-auto rounded-2xl gap-1 pb-2 w-full mt-0 shadow-xl"
+            className="flex flex-col bg-yellow-200 h-full pt-5 px-4 m-auto rounded-2xl gap-1 pb-2 w-full mt-0 shadow-xl border-2 border-yellow-100"
             onClick={(e) => handleExpand(e)}
           >
             {currItems.map((item, index) =>
