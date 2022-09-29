@@ -1,5 +1,5 @@
 import CurrItems from "./CurrItems";
-
+import { formatDate } from "./formatDate";
 const WeekView = ({
   currItems,
   setCurrItems,
@@ -8,20 +8,6 @@ const WeekView = ({
   dateChoice,
   today,
 }) => {
-  const formatDate = (date) => {
-    const string = date
-      .toLocaleDateString("en-US", {
-        weekday: "long",
-        day: "numeric",
-      })
-      .toUpperCase()
-      .split(" ")
-      .reverse();
-    const day = string[0].slice(0, 3);
-    const number = string[1];
-    return +string[1] < 10 ? `${day}0${number}` : `${day}${number}`;
-  };
-
   const daytwo = new Date(today.getTime() + 60 * 60 * 24 * 1000);
   const daythree = new Date(today.getTime() + 60 * 60 * 48 * 1000);
   const dayfour = new Date(today.getTime() + 60 * 60 * 72 * 1000);
