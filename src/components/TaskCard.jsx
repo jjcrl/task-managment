@@ -64,7 +64,7 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
           ? "w-full h-full relative text-rose-800  rounded-2xl mb-2 flex gap-1"
           : "w-full h-full relative text-yellow-900 rounded-2xl mb-2 flex gap-1"
       }
-      key={`list-item-${index}`}
+      key={item.priority ? `priority-list-item-${index}` : `list-item-${index}`}
     >
       {hoverItem}
       <span
