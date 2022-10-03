@@ -13,14 +13,6 @@ const CurrItems = ({
   dateChoice,
   limit,
 }) => {
-  const condensedItems = currItems
-    .filter((item) => !item.priority && item.dateChoice === day)
-    .slice(0, limit);
-
-  const allItems = currItems.filter(
-    (item) => item.dateChoice === day && !item.priority
-  );
-
   const [expanded, setExpanded] = useState(false);
   const [toggleItems, setToggleItems] = useState(false);
   const [display, setDisplay] = useState("show");
@@ -40,7 +32,6 @@ const CurrItems = ({
       setExpanded(!expanded);
     }
   };
-
   const handleExtendList = () => {
     setToggleItems(!toggleItems);
     display === "show" ? setDisplay("hide") : setDisplay("show");
@@ -52,26 +43,34 @@ const CurrItems = ({
     (item) => item.dateChoice === day && item.priority
   ).length;
 
+  const condensedItems = currItems
+    .filter((item) => !item.priority && item.dateChoice === day)
+    .slice(0, limit);
+
+  const allItems = currItems.filter(
+    (item) => item.dateChoice === day && !item.priority
+  );
+
   if (mini && !expanded) {
     return (
       <div className={classTest} onClick={(e) => handleExpand(e)}>
-        <ul className="w-5/6 m-auto h-min rounded-2xl h-full text-stone-800 bg-yellow-200 text-xs flex flex-col mt-4 pb-4">
-          <div className="w-full h-fit relative flex pl-3 pt-4">
+        <ul className="w-5/6 m-auto h-min rounded-2xl h-full text-stone-800 bg-yellow-200 flex flex-col mt-4 pb-4 border-2 border-yellow-100 shadow-md">
+          <div className="w-full h-fit relative flex pl-3 pt-4 ">
             <span
-              className="h-10 w-10 bg-yellow-300  border-2 border-yellow-200"
+              className="h-10 w-10 bg-yellow-300  border-2 border-yellow-200 shadow-md"
               id="rounded"
             ></span>
-            <li className="tracking-widest bg-yellow-300 h-fit w-fit rounded-3xl p-4 ml-3">
-              {total} !tems
+            <li className="tracking-widest bg-yellow-300 h-fit w-fit rounded-3xl p-4 ml-3 border-2 border-yellow-200 shadow-md text-lg font-semibold">
+              {total} Items
             </li>
           </div>
           <div className="w-full h-fit relative flex pl-3 pt-4">
             <span
-              className="h-10 w-10 bg-yellow-300  border-2 border-yellow-200"
+              className="h-10 w-10 bg-yellow-300  border-2 border-yellow-200 shadow-md"
               id="rounded"
             ></span>
-            <li className="tracking-widest bg-yellow-300 h-fit w-fit rounded-3xl p-4 ml-3">
-              {priototal} pr!o
+            <li className="tracking-widest bg-yellow-300 h-fit w-fit rounded-3xl p-4 ml-3 border-2 border-yellow-200 shadow-md text-xl font-semibold">
+              {priototal} Priority
             </li>
           </div>
         </ul>
@@ -82,8 +81,8 @@ const CurrItems = ({
       <div
         className={
           dateChoice === day
-            ? "h-full w-auto bg-stone-300 absolute right-0 top-0 z-10 left-1/4 pt-5"
-            : "h-full w-auto bg-stone-100 absolute right-0 top-0 z-10 left-1/4 pt-5"
+            ? "h-full w-auto bg-stone-300 absolute right-0 top-0 z-10 left-1/4"
+            : "h-full w-auto bg-stone-100 absolute right-0 top-0 z-10 left-1/4"
         }
         onClick={() => {
           setDateChoice("day");
@@ -141,7 +140,13 @@ const CurrItems = ({
   } else {
     return (
       <div className={classTest}>
-        <ul className="w-full h-fit bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-1 py-5 shadow-xl mt-0 border-2 border-yellow-100">
+        <ul
+          className={
+            dateChoice === day
+              ? "w-full h-fit bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-1 py-5 shadow-xl mt-0 border-2 border-yellow-50"
+              : "w-full h-fit bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-1 py-5 shadow-md mt-0 border-2 border-yellow-100"
+          }
+        >
           {toggleItems === false
             ? condensedItems.map((item, index) => (
                 <TaskCard
@@ -163,7 +168,7 @@ const CurrItems = ({
           {currItems.filter((item) => item.dateChoice === day && !item.priority)
             .length > 3 && limit ? (
             <li
-              className="bg-yellow-50 w-fit rounded-3xl text-xl my-1 py-1 px-20 border-2 border-yellow-100 shadow-sm text-stone-700 font-semibold"
+              className="bg-yellow-50 w-fit rounded-3xl text-xl my-1 py-1 px-20 border-2 border-yellow-100 shadow-md text-stone-700 font-semibold"
               onClick={(e) => handleExtendList(e)}
             >
               {display} +{" "}
@@ -174,7 +179,7 @@ const CurrItems = ({
           ) : null}
         </ul>
 
-        <ul className="flex flex-col bg-yellow-200 h-fit px-4 m-auto rounded-2xl gap-1 py-5 w-full mt-0 shadow-xl border-2 border-yellow-100">
+        <ul className="flex flex-col bg-yellow-200 h-fit px-4 m-auto rounded-2xl gap-1 py-5 w-full mt-0 shadow-md border-2 border-yellow-100">
           {currItems.map((item, index) =>
             item.priority && item.dateChoice === day ? (
               <TaskCard
