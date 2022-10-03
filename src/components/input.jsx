@@ -94,7 +94,7 @@ const Input = ({ setCurrItems, dateChoice }) => {
           type="text"
           onKeyDown={onEnterPress}
         />{" "}
-        <div className="absolute top-36 left-80 -ml-2">
+        <div className="absolute top-40 left-80 -m-2">
           <input
             type="checkbox"
             id="important"
@@ -105,7 +105,7 @@ const Input = ({ setCurrItems, dateChoice }) => {
             checked={toggle}
           />
         </div>
-        <div className="absolute ml-2 top-40 -m-2 border-2 px-2 py-1 bg-stone-200 w-fit h-fit">
+        <div className="absolute ml-2 top-40 -m-2 border-2 px-3 py-1 bg-stone-200 w-fit h-fit rounded-xl">
           <p>tagging container</p>
         </div>
       </form>
