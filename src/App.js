@@ -88,6 +88,7 @@ function App() {
               setDateChoice={setDateChoice}
               dateChoice={dateChoice}
               days={[day1, day2, day3, day4, day5, day6, day7]}
+              taskDateOptions={taskDateOptions}
             />
           )}
         </section>
