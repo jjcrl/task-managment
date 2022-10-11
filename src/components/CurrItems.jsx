@@ -28,9 +28,7 @@ const CurrItems = ({
   };
 
   const handleExpand = (e) => {
-    if (e.detail === 2) {
-      setExpanded(!expanded);
-    }
+    setExpanded(!expanded);
   };
   const handleExtendList = () => {
     setToggleItems(!toggleItems);
@@ -53,11 +51,11 @@ const CurrItems = ({
 
   if (mini && !expanded) {
     return (
-      <div className={classTest} onClick={(e) => handleExpand(e)}>
+      <div className={classTest}>
         <ul className="w-5/6 m-auto h-min rounded-xl h-full text-zinc-800 bg-zinc-50 flex flex-col mt-4 pb-4 border-2 border-zinc-100 shadow-sm">
           <div className="w-full h-fit relative flex pl-3 pt-4 ">
             <span
-              className="h-10 w-10 bg-zinc-50 border-2 border-zinc-100 shadow-sm grid items-center font-semibold text-zinc-800"
+              className="h-10 w-10 bg-white border-2 border-zinc-100 shadow-sm grid items-center font-semibold text-zinc-800"
               id="rounded"
             >
               {total}
@@ -68,13 +66,13 @@ const CurrItems = ({
           </div>
           <div className="w-full h-fit relative flex pl-3 pt-4">
             <span
-              className="h-10 w-10 bg-zinc-50 border-2 border-zinc-100 shadow-sm grid items-center font-semibold text-zinc-800"
+              className="h-10 w-10 bg-white border-2 border-zinc-100 shadow-sm grid items-center font-semibold text-zinc-800"
               id="rounded"
             >
               {priototal}
             </span>
             <li className="tracking-widest bg-zinc-100 h-10 w-fit px-5 rounded-3xl ml-3 border-2 border-zinc-200 shadow-sm text-lg font-semibold grid items-center">
-              Prioritty
+              Priority
             </li>
           </div>
           <button
@@ -89,17 +87,31 @@ const CurrItems = ({
   } else if (mini && expanded) {
     return (
       <div
-        className={
-          dateChoice === day
-            ? "h-full w-auto bg-white absolute right-0 top-0 z-10 left-1/4"
-            : "h-full w-auto bg-white absolute right-0 top-0 z-10 left-1/4"
-        }
+        className="h-full w-auto bg-white absolute right-0 top-0 z-10 left-1/4"
         onClick={() => {
-          setDateChoice("day");
+          setDateChoice("day-1");
         }}
       >
-        <h2 className=" text-slate-700 w-fit p-5">test</h2>
-        <div className="w-full m-auto h-fit flex flex-row gap-8 p-10 relative px-20">
+        <h2
+          className={
+            dateChoice === day
+              ? "text-slate-800 w-ful text-left ml-5 p-2 underline"
+              : "text-slate-700 w-full text-left ml-5 p-2"
+          }
+          onClick={() => {
+            setDateChoice(day);
+          }}
+        >
+          {taskDateOptions[day]}
+        </h2>
+        <div
+          className="bg-indigo-50 w-fit px-7 py-1 rounded-3xl border-2 border-indigo-200 absolute right-10 top-10 shadow-md text-zinc-800"
+          onClick={(e) => handleExpand(e)}
+        >
+          <button className="px-3 py-2 text-xl font-bold">go back</button>
+        </div>
+
+        <div className="w-full m-auto h-full flex flex-row gap-8 p-10 relative px-20">
           <ul
             className="w-full h-3/4 bg-zinc-50 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-sm mt-0 border-2 border-slate-50"
             onClick={(e) => handleExpand(e)}

@@ -1,5 +1,4 @@
 import CurrItems from "./CurrItems";
-import { formatDate } from "./formatDate";
 const WeekView = ({
   currItems,
   setCurrItems,
@@ -7,6 +6,7 @@ const WeekView = ({
   setDateChoice,
   dateChoice,
   days,
+  taskDateOptions,
 }) => {
   return (
     <div className="h-full w-full grid grid-cols-4 auto-rows-auto bg-whgite">
@@ -33,6 +33,7 @@ const WeekView = ({
             mini={true}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
+            taskDateOptions={taskDateOptions}
           />
         }
       </div>
@@ -59,6 +60,7 @@ const WeekView = ({
             mini={true}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
+            taskDateOptions={taskDateOptions}
           />
         }
       </div>{" "}
@@ -85,6 +87,7 @@ const WeekView = ({
             day={"day-3"}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
+            taskDateOptions={taskDateOptions}
           />
         }
       </div>{" "}
@@ -111,6 +114,7 @@ const WeekView = ({
             mini={true}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
+            taskDateOptions={taskDateOptions}
           />
         }
       </div>{" "}
@@ -137,6 +141,7 @@ const WeekView = ({
             mini={true}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
+            taskDateOptions={taskDateOptions}
           />
         }
       </div>{" "}
@@ -164,6 +169,7 @@ const WeekView = ({
             mini={true}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
+            taskDateOptions={taskDateOptions}
           />
         }
       </div>{" "}
@@ -190,6 +196,7 @@ const WeekView = ({
             mini={true}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
+            taskDateOptions={taskDateOptions}
           />
         }
       </div>
