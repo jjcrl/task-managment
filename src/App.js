@@ -245,7 +245,7 @@ function App() {
             dateChoice={dateChoice}
             view={view}
           />
-          <div className="w-min h-min text-6xl text-zinc-700 ml-auto p-5">
+          <div className="w-min h-min text-6xl text-slate-700 ml-auto p-5">
             <h2>{percent ? `${percent}%` : "0%"}</h2>
           </div>
           <PrevItems prevItems={prevItems} />
