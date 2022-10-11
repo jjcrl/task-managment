@@ -61,18 +61,17 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
     <div
       className={
         item.priority
-          ? "w-full h-full relative text-rose-800  rounded-2xl mb-2 flex gap-1"
-          : "w-full h-full relative text-yellow-900 rounded-2xl mb-2 flex gap-1"
+          ? "w-full h-fit relative text-rose-800  rounded-2xl"
+          : "w-full h-fit relative text-yellow-900 rounded-2xl"
       }
       key={item.priority ? `priority-list-item-${index}` : `list-item-${index}`}
     >
       {hoverItem}
-      <span
-        className="h-7 w-8 bg-yellow-300 opacity-80 border-2 border-yellow-200 my-auto shadow-md mt-0"
-        id="rounded"
-      ></span>
-      <li className="w-full h-full text-left text-lg py-2 px-3 m-0 font-semibold first-letter:uppercase rounded-2xl bg-yellow-300 border-2 border-yellow-200 shadow-md">
-        {item.input} <br />
+      <li className="w-full h-full text-left text-lg font-semibold first-letter:uppercase rounded-2xl bg-yellow-300 border-2 border-yellow-200 shadow-md px-5 py-2 leading-none tracking-wide">
+        {item.input}
+        <span className="pl-2 italic font-light text-sm tracking-tight leading-none">
+          11/12 @ 9:03
+        </span>
       </li>
     </div>
   );

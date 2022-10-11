@@ -143,10 +143,11 @@ const CurrItems = ({
         <ul
           className={
             dateChoice === day
-              ? "w-full h-fit bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-1 py-5 shadow-xl mt-0 border-2 border-yellow-50"
-              : "w-full h-fit bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-1 py-5 shadow-md mt-0 border-2 border-yellow-100"
+              ? "w-full h-fit bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-xl mt-0 border-2 border-yellow-50"
+              : "w-full h-fit bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-md mt-0 border-2 border-yellow-100"
           }
         >
+          {!limit ? <h3 className="text-left pl-3">Today's Items</h3> : null}
           {toggleItems === false
             ? condensedItems.map((item, index) => (
                 <TaskCard
@@ -179,7 +180,8 @@ const CurrItems = ({
           ) : null}
         </ul>
 
-        <ul className="flex flex-col bg-yellow-200 h-fit px-4 m-auto rounded-2xl gap-1 py-5 w-full mt-0 shadow-md border-2 border-yellow-100">
+        <ul className="flex flex-col bg-yellow-200 h-fit px-4 m-auto rounded-2xl gap-3 py-5 w-full mt-0 shadow-md border-2 border-yellow-100">
+          {!limit ? <h3 className="text-left pl-3">Priority Items</h3> : null}
           {currItems.map((item, index) =>
             item.priority && item.dateChoice === day ? (
               <TaskCard

@@ -7,7 +7,7 @@ const PrevItems = ({ prevItems }) => {
       <div className="flex flex-row">
         <div className="m-auto pl-3">
           <span
-            className="bg-yellow-50 w-16 h-16 pl-2 pr-3 text-3xl font-bold grid items-center border-2 border-yellow-300 text-yellow-400 shadow-md"
+            className="bg-white pl-3 pr-3.5 py-3.5 text-3xl font-bold grid items-center border-2 border-neutral-500 text-neutral-600 shadow-md"
             id="rounded"
           >
             +{prevItems.length > 6 ? prevItems.length - 6 : prevItems.length}
@@ -26,25 +26,27 @@ const PrevItems = ({ prevItems }) => {
         </ul>
       </div>
 
-      <ul className="w-fit h-full m-auto pt-5">
+      <ul className="w-fit h-full m-auto pt-3 mr-3">
         {items.map((item, index) => (
           <div
-            className="flex felx-row m-2"
+            className="flex felx-row m-2 gap-3"
             id={`prev-item-${index}`}
             key={`prev-item-${index}`}
           >
             <li
-              className="bg-lime-200 w-10 h-10 p-2 text-xl grid items-center mx-1 shadow-md"
-              id="rounded"
+              className="bg-zinc-200 w-11 h-10 text-2xl grid items-center shadow-md rounded-lg"
               key={`emoji-item-${index}`}
             >
-              {item.emoji}
+              ✅
             </li>
             <li
               key={`item-${index}`}
-              className="p-1 text-lg text-stone-800 font-semibold text-left w-fit bg-lime-200 rounded-3xl pl-4 pr-3 ml-0 shadow-md"
+              className="p-1 text-lg text-stone-800 font-semibold text-left w-full bg-zinc-200 rounded-lg pl-4 pr-3 ml-0 shadow-md line-through"
+              id="first-none-strike"
             >
-              {`✅ ${item.input.slice(0, 25)}..`}
+              {item.input.length > 25
+                ? `${item.emoji} ${item.input.slice(0, 25)}...`
+                : `${item.emoji} ${item.input}`}
             </li>
           </div>
         ))}
