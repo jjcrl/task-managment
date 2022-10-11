@@ -95,12 +95,12 @@ const Input = ({ setCurrItems, dateChoice, taskDateOptions, today }) => {
         <textarea
           onChange={(e) => setInput(e.target.value)}
           value={input}
-          className="w-full h-40 text-2xl m-auto p-2 resize-none text-stone-900 bg-zinc-50"
+          className="w-full h-40 text-2xl m-auto p-3 resize-none text-stone-900 bg-zinc-50"
           placeholder="What do you have to do ?"
           type="text"
           onKeyDown={onEnterPress}
         />{" "}
-        <div className="absolute top-40 left-80 -m-2">
+        <div className="absolute top-40 left-6 -m-3">
           <input
             type="checkbox"
             id="important"
@@ -111,7 +111,7 @@ const Input = ({ setCurrItems, dateChoice, taskDateOptions, today }) => {
             checked={toggle}
           />
         </div>
-        <div className="absolute ml-2 top-40 -m-2 border-2 px-3 py-2 bg-white w-fit h-fit rounded-sm font-regular border border-zinc-700 shadow-sm">
+        <div className="absolute ml-16 top-40 -m-3 border px-4 py-2 bg-white w-fit h-10 rounded-sm font-regular border-gray-500 shadow-sm">
           <p>• {taskDateOptions[dateChoice]}</p>
         </div>
       </form>
