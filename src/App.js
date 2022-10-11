@@ -238,14 +238,14 @@ function App() {
     <div className="App">
       <main>
         <Navigation setView={setView} />
-        <section className="w-1/4 h-screen flex flex-col bg-stone-100">
+        <section className="w-1/4 h-screen flex flex-col bg-zinc-100">
           <Input
             currItems={currItems}
             setCurrItems={setCurrItems}
             dateChoice={dateChoice}
             view={view}
           />
-          <div className="w-min h-min text-6xl text-stone-500 ml-auto p-5">
+          <div className="w-min h-min text-6xl text-zinc-700 ml-auto p-5">
             <h2>{percent ? `${percent}%` : "0%"}</h2>
           </div>
           <PrevItems prevItems={prevItems} />

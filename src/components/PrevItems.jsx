@@ -7,7 +7,7 @@ const PrevItems = ({ prevItems }) => {
       <div className="flex flex-row">
         <div className="m-auto pl-3">
           <span
-            className="bg-white pl-3 pr-3.5 py-3.5 text-3xl font-bold grid items-center border-2 border-neutral-500 text-neutral-600 shadow-md"
+            className="bg-white pl-3 pr-3 py-3 text-3xl font-bold grid items-center border-2 border-zinc-500 text-zinc-800 shadow-md"
             id="rounded"
           >
             +{prevItems.length > 6 ? prevItems.length - 6 : prevItems.length}
@@ -17,7 +17,7 @@ const PrevItems = ({ prevItems }) => {
           {emojis.map((item, index) => (
             <li
               key={`emoji-${index}`}
-              className="text-3xl inline bg-white h-16 w-16 grid items-center border-2 border-stone-500"
+              className="text-3xl inline bg-white h-16 w-16 grid items-center border-2 border-zinc-500"
               id={`emoji-item-${index}`}
             >
               {item.emoji}
@@ -26,22 +26,22 @@ const PrevItems = ({ prevItems }) => {
         </ul>
       </div>
 
-      <ul className="w-fit h-full m-auto pt-3 mr-3">
+      <ul className="w-fit h-full m-auto pt-3 mr-2 ml-1">
         {items.map((item, index) => (
           <div
-            className="flex felx-row m-2 gap-3"
+            className="flex felx-row m-2 gap-2"
             id={`prev-item-${index}`}
             key={`prev-item-${index}`}
           >
             <li
-              className="bg-zinc-200 w-11 h-10 text-2xl grid items-center shadow-md rounded-lg"
+              className="bg-white w-12 h-11 text-2xl grid items-center shadow-sm rounded-lg"
               key={`emoji-item-${index}`}
             >
               ✅
             </li>
             <li
               key={`item-${index}`}
-              className="p-1 text-lg text-stone-800 font-semibold text-left w-full bg-zinc-200 rounded-lg pl-4 pr-3 ml-0 shadow-md line-through"
+              className="p-2 text-lg text-zinc-800 font-semibold text-left w-full bg-white rounded-lg pl-4 pr-3 ml-0 shadow-sm line-through tracking-wide"
               id="first-none-strike"
             >
               {item.input.length > 25

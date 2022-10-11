@@ -54,25 +54,35 @@ const CurrItems = ({
   if (mini && !expanded) {
     return (
       <div className={classTest} onClick={(e) => handleExpand(e)}>
-        <ul className="w-5/6 m-auto h-min rounded-2xl h-full text-stone-800 bg-yellow-200 flex flex-col mt-4 pb-4 border-2 border-yellow-100 shadow-md">
+        <ul className="w-5/6 m-auto h-min rounded-xl h-full text-zinc-800 bg-zinc-50 flex flex-col mt-4 pb-4 border-2 border-zinc-100 shadow-sm">
           <div className="w-full h-fit relative flex pl-3 pt-4 ">
             <span
-              className="h-10 w-10 bg-yellow-300  border-2 border-yellow-200 shadow-md"
+              className="h-10 w-10 bg-zinc-50 border-2 border-zinc-100 shadow-sm grid items-center font-semibold text-zinc-800"
               id="rounded"
-            ></span>
-            <li className="tracking-widest bg-yellow-300 h-fit w-fit rounded-3xl p-4 ml-3 border-2 border-yellow-200 shadow-md text-lg font-semibold">
-              {total} Items
+            >
+              {total}
+            </span>
+            <li className="tracking-widest bg-zinc-100 h-10 w-fit px-5 rounded-3xl ml-3 border-2 border-zinc-200 shadow-sm text-lg font-semibold grid items-center">
+              Items
             </li>
           </div>
           <div className="w-full h-fit relative flex pl-3 pt-4">
             <span
-              className="h-10 w-10 bg-yellow-300  border-2 border-yellow-200 shadow-md"
+              className="h-10 w-10 bg-zinc-50 border-2 border-zinc-100 shadow-sm grid items-center font-semibold text-zinc-800"
               id="rounded"
-            ></span>
-            <li className="tracking-widest bg-yellow-300 h-fit w-fit rounded-3xl p-4 ml-3 border-2 border-yellow-200 shadow-md text-xl font-semibold">
-              {priototal} Priority
+            >
+              {priototal}
+            </span>
+            <li className="tracking-widest bg-zinc-100 h-10 w-fit px-5 rounded-3xl ml-3 border-2 border-zinc-200 shadow-sm text-lg font-semibold grid items-center">
+              Prioritty
             </li>
           </div>
+          <button
+            onClick={(e) => handleExpand(e)}
+            className="tracking-widest bg-white h-10 w-fit px-8 mt-3 rounded-3xl border-2 border-zinc-200 shadow-sm text-lg font-semibold grid items-center m-auto"
+          >
+            Show More
+          </button>
         </ul>
       </div>
     );
@@ -143,11 +153,13 @@ const CurrItems = ({
         <ul
           className={
             dateChoice === day
-              ? "w-full h-fit bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-xl mt-0 border-2 border-yellow-50"
-              : "w-full h-fit bg-yellow-200 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-md mt-0 border-2 border-yellow-100"
+              ? "w-full h-3/4 bg-zinc-50 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-sm mt-0 border-2 border-slate-50"
+              : "w-full h-3/4 bg-zinc-50 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-sm mt-0 border-2 border-slate-50"
           }
         >
-          {!limit ? <h3 className="text-left pl-3">Today's Items</h3> : null}
+          {!limit ? (
+            <h3 className="text-left pl-3 text-zinc-900">Today's Items</h3>
+          ) : null}
           {toggleItems === false
             ? condensedItems.map((item, index) => (
                 <TaskCard
@@ -169,7 +181,7 @@ const CurrItems = ({
           {currItems.filter((item) => item.dateChoice === day && !item.priority)
             .length > 3 && limit ? (
             <li
-              className="bg-yellow-50 w-fit rounded-3xl text-xl my-1 py-1 px-20 border-2 border-yellow-100 shadow-md text-stone-700 font-semibold"
+              className="bg-white w-full rounded-xl text-xl my-1 py-1 px-20 border-2 border-zinc-100 shadow-sm text-zinc-800 font-semibold"
               onClick={(e) => handleExtendList(e)}
             >
               {display} +{" "}
@@ -180,8 +192,10 @@ const CurrItems = ({
           ) : null}
         </ul>
 
-        <ul className="flex flex-col bg-yellow-200 h-fit px-4 m-auto rounded-2xl gap-3 py-5 w-full mt-0 shadow-md border-2 border-yellow-100">
-          {!limit ? <h3 className="text-left pl-3">Priority Items</h3> : null}
+        <ul className="flex flex-col bg-zinc-50 h-3/4 px-4 m-auto rounded-2xl gap-3 py-5 w-full mt-0 shadow-sm border border-slate-50">
+          {!limit ? (
+            <h3 className="text-left pl-3 text-zinc-900">Priority Items</h3>
+          ) : null}
           {currItems.map((item, index) =>
             item.priority && item.dateChoice === day ? (
               <TaskCard

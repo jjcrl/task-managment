@@ -16,18 +16,18 @@ const WeekView = ({
   const dayseven = new Date(today.getTime() + 60 * 60 * 148 * 1000);
 
   return (
-    <div className="h-full w-full grid grid-cols-4 auto-rows-auto bg-stone-50">
+    <div className="h-full w-full grid grid-cols-4 auto-rows-auto bg-whgite">
       <div
         className={
           dateChoice === "day-1"
-            ? "h-full w-full bg-stone-300 flex flex-col"
-            : "h-full w-full bg-stone-100 flex flex-col"
+            ? "h-full w-full bg-white flex flex-col"
+            : "h-full w-full bg-white flex flex-col"
         }
         onClick={() => {
           setDateChoice("day-1");
         }}
       >
-        <h2 className="text-stone-700">{formatDate(today)}</h2>
+        <h2 className="text-zinc-700">{formatDate(today)}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -45,14 +45,14 @@ const WeekView = ({
       <div
         className={
           dateChoice === "day-2"
-            ? "h-full w-full bg-stone-300 flex flex-col"
-            : "h-full w-full bg-stone-100 flex flex-col"
+            ? "h-full w-full bg-white flex flex-col"
+            : "h-full w-full bg-white flex flex-col"
         }
         onClick={() => {
           setDateChoice("day-2");
         }}
       >
-        <h2 className="text-stone-700">{formatDate(daytwo)}</h2>
+        <h2 className="text-zinc-700">{formatDate(daytwo)}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -70,14 +70,14 @@ const WeekView = ({
       <div
         className={
           dateChoice === "day-3"
-            ? "h-full w-full bg-stone-300 flex flex-col"
-            : "h-full w-full bg-stone-100 flex flex-col"
+            ? "h-full w-full bg-white flex flex-col"
+            : "h-full w-full bg-white flex flex-col"
         }
         onClick={() => {
           setDateChoice("day-3");
         }}
       >
-        <h2 className="text-stone-700">{formatDate(daythree)}</h2>
+        <h2 className="text-zinc-700">{formatDate(daythree)}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -95,8 +95,8 @@ const WeekView = ({
       <div
         className={
           dateChoice === "day-4"
-            ? "h-full w-full bg-stone-300 flex flex-col"
-            : "h-full w-full bg-stone-100 flex flex-col"
+            ? "h-full w-full bg-white flex flex-col"
+            : "h-full w-full bg-white flex flex-col"
         }
         onClick={() => {
           setDateChoice("day-4");
@@ -120,14 +120,14 @@ const WeekView = ({
       <div
         className={
           dateChoice === "day-5"
-            ? "h-full w-full bg-stone-300 flex flex-col"
-            : "h-full w-full bg-stone-100 flex flex-col"
+            ? "h-full w-full bg-white flex flex-col"
+            : "h-full w-full bg-white flex flex-col"
         }
         onClick={() => {
           setDateChoice("day-5");
         }}
       >
-        <h2 className="text-stone-700">{formatDate(dayfive)}</h2>
+        <h2 className="text-zinc-700">{formatDate(dayfive)}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -145,14 +145,14 @@ const WeekView = ({
       <div
         className={
           dateChoice === "day-6"
-            ? "h-full w-full bg-stone-300 flex flex-col"
-            : "h-full w-full bg-stone-100 flex flex-col"
+            ? "h-full w-full bg-white flex flex-col"
+            : "h-full w-full bg-white flex flex-col"
         }
         onClick={() => {
           setDateChoice("day-6");
         }}
       >
-        <h2 className="text-stone-700">{formatDate(daysix)}</h2>
+        <h2 className="text-zinc-700">{formatDate(daysix)}</h2>
 
         {
           <CurrItems
@@ -171,14 +171,14 @@ const WeekView = ({
       <div
         className={
           dateChoice === "day-7"
-            ? "h-full w-full bg-stone-300 flex flex-col"
-            : "h-full w-full bg-stone-100 flex flex-col"
+            ? "h-full w-full bg-white flex flex-col"
+            : "h-full w-full bg-white flex flex-col"
         }
         onClick={() => {
           setDateChoice("day-7");
         }}
       >
-        <h2 className="text-stone-700">{formatDate(dayseven)}</h2>
+        <h2 className="text-zinc-700">{formatDate(dayseven)}</h2>
         {
           <CurrItems
             currItems={currItems}

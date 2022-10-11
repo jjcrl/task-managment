@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Input = ({ setCurrItems, dateChoice }) => {
+const Input = ({ setCurrItems, dateChoice, view }) => {
   const [input, setInput] = useState();
   const [toggle, setToggle] = useState(false);
 
@@ -82,14 +82,14 @@ const Input = ({ setCurrItems, dateChoice }) => {
 
   return (
     <>
-      <div className="bg-yellow-300 text-yellow-500 text-left py-2 inline pl-2">
+      <div className="bg-zinc-100 text-zinc-700 text-left py-2 inline pl-2">
         <h6>prompt...</h6>
       </div>
       <form onSubmit={handleSubmit}>
         <textarea
           onChange={(e) => setInput(e.target.value)}
           value={input}
-          className="w-full h-40 text-3xl m-auto p-2 resize-none text-stone-900"
+          className="w-full h-40 text-3xl m-auto p-2 resize-none text-stone-900 bg-zinc-50"
           placeholder="What do you have to do ?"
           type="text"
           onKeyDown={onEnterPress}
@@ -105,8 +105,8 @@ const Input = ({ setCurrItems, dateChoice }) => {
             checked={toggle}
           />
         </div>
-        <div className="absolute ml-2 top-40 -m-2 border-2 px-3 py-1 bg-stone-200 w-fit h-fit rounded-xl">
-          <p>tagging container</p>
+        <div className="absolute ml-2 top-40 -m-2 border-2 px-3 py-1 bg-zinc-200 w-fit h-fit rounded-xl">
+          <p>{view}</p>
         </div>
       </form>
     </>

@@ -43,7 +43,7 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
         onMouseLeave={handleLHoverLeave}
         className={
           toggleL
-            ? "w-1/2 h-full absolute inset-0 bg-none opacity-100 z-10 pl-9"
+            ? "w-1/2 h-full absolute inset-0 bg-none opacity-100 z-10"
             : "w-1/2 h-full absolute inset-0  bg-none opacity-0 z-10"
         }
       >
@@ -61,16 +61,16 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
     <div
       className={
         item.priority
-          ? "w-full h-fit relative text-rose-800  rounded-2xl"
-          : "w-full h-fit relative text-yellow-900 rounded-2xl"
+          ? "w-fit h-fit relative text-slate-900 rounded-xl"
+          : "w-fit h-fit relative text-slate-900 rounded-xl"
       }
       key={item.priority ? `priority-list-item-${index}` : `list-item-${index}`}
     >
       {hoverItem}
-      <li className="w-full h-full text-left text-lg font-semibold first-letter:uppercase rounded-2xl bg-yellow-300 border-2 border-yellow-200 shadow-md px-5 py-2 leading-none tracking-wide">
-        {item.input}
-        <span className="pl-2 italic font-light text-sm tracking-tight leading-none">
-          11/12 @ 9:03
+      <li className="w-full h-full text-left text-lg font-semibold first-letter:uppercase rounded-xl bg-indigo-50 border-2 border-indigo-100 shadow-md px-5 py-3 leading-none tracking-wide">
+        • {item.input}
+        <span className="pl-2 italic font-medium text-sm tracking-tight leading-none opacity-60 text-indigo-400">
+          11/12 @ 09:03
         </span>
       </li>
     </div>
