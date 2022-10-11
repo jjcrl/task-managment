@@ -31,13 +31,13 @@ function App() {
   const day7 = formatDate(new Date(today.getTime() + 60 * 60 * 148 * 1000));
 
   const taskDateOptions = {
-    "day-one": day1,
+    "day-1": day1,
     "day-2": day2,
-    "day-three": day3,
-    "day-four": day4,
-    "day-five": day5,
-    "day-six": day6,
-    "day-seven": day7,
+    "day-3": day3,
+    "day-4": day4,
+    "day-4": day5,
+    "day-5": day6,
+    "day-7": day7,
   };
 
   return (
@@ -65,7 +65,7 @@ function App() {
               currItems={currItems}
               setCurrItems={setCurrItems}
               setPrevItems={setPrevItems}
-              days={[day1]}
+              day={day1}
               dateChoice={dateChoice}
               setDateChoice={setDateChoice}
               taskDateOptions={taskDateOptions}

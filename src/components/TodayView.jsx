@@ -3,7 +3,8 @@ const TodayView = ({
   currItems,
   setCurrItems,
   setPrevItems,
-  days,
+  day,
+  dateChoice,
   setDateChoice,
   taskDateOptions,
 }) => {
@@ -14,7 +15,15 @@ const TodayView = ({
         setDateChoice("day-1");
       }}
     >
-      <h2 className="text-slate-700 w-full text-left ml-5 p-2">{days[0]}</h2>
+      <h2
+        className={
+          dateChoice === "day-1"
+            ? "text-slate-700 w-ful text-left ml-5 p-2 underline"
+            : "text-slate-700 w-full text-left ml-5 p-2"
+        }
+      >
+        {day}
+      </h2>
       <CurrItems
         currItems={currItems}
         setCurrItems={setCurrItems}

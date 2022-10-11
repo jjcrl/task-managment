@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Input = ({ setCurrItems, dateChoice, view, today }) => {
+const Input = ({ setCurrItems, dateChoice, taskDateOptions, today }) => {
   const [input, setInput] = useState();
   const [toggle, setToggle] = useState(false);
 
@@ -70,7 +70,7 @@ const Input = ({ setCurrItems, dateChoice, view, today }) => {
         input: input,
         priority: toggle,
         emoji,
-        dateChoice: dateChoice ? dateChoice : "day-1",
+        dateChoice: dateChoice,
         id: currItems.length,
         created_at: date + time,
       },
@@ -104,15 +104,15 @@ const Input = ({ setCurrItems, dateChoice, view, today }) => {
           <input
             type="checkbox"
             id="important"
-            className="w-10 h-10"
+            className="h-10 w-10 shadow-sm"
             onChange={() => {
-              setToggle(true);
+              setToggle(!toggle);
             }}
             checked={toggle}
           />
         </div>
-        <div className="absolute ml-2 top-40 -m-2 border-2 px-3 py-1 bg-zinc-200 w-fit h-fit rounded-xl">
-          <p>{view}</p>
+        <div className="absolute ml-2 top-40 -m-2 border-2 px-3 py-2 bg-white w-fit h-fit rounded-sm font-regular border border-zinc-700 shadow-sm">
+          <p>• {taskDateOptions[dateChoice]}</p>
         </div>
       </form>
     </>
