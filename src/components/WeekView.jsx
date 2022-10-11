@@ -10,17 +10,19 @@ const WeekView = ({
 }) => {
   return (
     <div className="h-full w-full grid grid-cols-4 auto-rows-auto bg-whgite">
-      <div
-        className={
-          dateChoice === "day-1"
-            ? "h-full w-full bg-white flex flex-col"
-            : "h-full w-full bg-white flex flex-col"
-        }
-        onClick={() => {
-          setDateChoice("day-1");
-        }}
-      >
-        <h2 className="text-slate-700">{days[0]}</h2>
+      <div className="h-full w-full bg-white flex flex-col">
+        <h2
+          className={
+            dateChoice === "day-1"
+              ? "text-slate-800 w-ful text-left ml-5 p-2 underline"
+              : "text-slate-700 w-full text-left ml-5 p-2"
+          }
+          onClick={() => {
+            setDateChoice("day-1");
+          }}
+        >
+          {days[0]}
+        </h2>
         {
           <CurrItems
             currItems={currItems}
@@ -34,17 +36,19 @@ const WeekView = ({
           />
         }
       </div>
-      <div
-        className={
-          dateChoice === "day-2"
-            ? "h-full w-full bg-white flex flex-col"
-            : "h-full w-full bg-white flex flex-col"
-        }
-        onClick={() => {
-          setDateChoice("day-2");
-        }}
-      >
-        <h2 className="text-slate-700">{days[1]}</h2>
+      <div className="h-full w-full bg-white flex flex-col">
+        <h2
+          className={
+            dateChoice === "day-2"
+              ? "text-slate-800 w-ful text-left ml-5 p-2 underline"
+              : "text-slate-700 w-full text-left ml-5 p-2"
+          }
+          onClick={() => {
+            setDateChoice("day-2");
+          }}
+        >
+          {days[1]}
+        </h2>
         {
           <CurrItems
             currItems={currItems}
@@ -58,17 +62,19 @@ const WeekView = ({
           />
         }
       </div>{" "}
-      <div
-        className={
-          dateChoice === "day-3"
-            ? "h-full w-full bg-white flex flex-col"
-            : "h-full w-full bg-white flex flex-col"
-        }
-        onClick={() => {
-          setDateChoice("day-3");
-        }}
-      >
-        <h2 className="text-slate-700">{days[2]}</h2>
+      <div className="h-full w-full bg-white flex flex-col">
+        <h2
+          className={
+            dateChoice === "day-3"
+              ? "text-slate-800 w-ful text-left ml-5 p-2 underline"
+              : "text-slate-700 w-full text-left ml-5 p-2"
+          }
+          onClick={() => {
+            setDateChoice("day-3");
+          }}
+        >
+          {days[2]}
+        </h2>
         {
           <CurrItems
             currItems={currItems}
@@ -82,17 +88,19 @@ const WeekView = ({
           />
         }
       </div>{" "}
-      <div
-        className={
-          dateChoice === "day-4"
-            ? "h-full w-full bg-white flex flex-col"
-            : "h-full w-full bg-white flex flex-col"
-        }
-        onClick={() => {
-          setDateChoice("day-4");
-        }}
-      >
-        <h2 className="text-slate-700">{days[3]}</h2>
+      <div className="h-full w-full bg-white flex flex-col">
+        <h2
+          className={
+            dateChoice === "day-4"
+              ? "text-slate-800 w-ful text-left ml-5 p-2 underline"
+              : "text-slate-700 w-full text-left ml-5 p-2"
+          }
+          onClick={() => {
+            setDateChoice("day-4");
+          }}
+        >
+          {days[3]}
+        </h2>
         {
           <CurrItems
             currItems={currItems}
@@ -106,17 +114,19 @@ const WeekView = ({
           />
         }
       </div>{" "}
-      <div
-        className={
-          dateChoice === "day-5"
-            ? "h-full w-full bg-white flex flex-col"
-            : "h-full w-full bg-white flex flex-col"
-        }
-        onClick={() => {
-          setDateChoice("day-5");
-        }}
-      >
-        <h2 className="text-slate-700">{days[4]}</h2>
+      <div className="h-full w-full bg-white flex flex-col">
+        <h2
+          className={
+            dateChoice === "day-5"
+              ? "text-slate-800 w-ful text-left ml-5 p-2 underline"
+              : "text-slate-700 w-full text-left ml-5 p-2"
+          }
+          onClick={() => {
+            setDateChoice("day-5");
+          }}
+        >
+          {days[4]}
+        </h2>
         {
           <CurrItems
             currItems={currItems}
@@ -130,17 +140,19 @@ const WeekView = ({
           />
         }
       </div>{" "}
-      <div
-        className={
-          dateChoice === "day-6"
-            ? "h-full w-full bg-white flex flex-col"
-            : "h-full w-full bg-white flex flex-col"
-        }
-        onClick={() => {
-          setDateChoice("day-6");
-        }}
-      >
-        <h2 className="text-slate-700">{days[5]}</h2>
+      <div className="h-full w-full bg-white flex flex-col">
+        <h2
+          className={
+            dateChoice === "day-6"
+              ? "text-slate-800 w-ful text-left ml-5 p-2 underline"
+              : "text-slate-700 w-full text-left ml-5 p-2"
+          }
+          onClick={() => {
+            setDateChoice("day-6");
+          }}
+        >
+          {days[5]}
+        </h2>
 
         {
           <CurrItems
@@ -155,17 +167,19 @@ const WeekView = ({
           />
         }
       </div>{" "}
-      <div
-        className={
-          dateChoice === "day-7"
-            ? "h-full w-full bg-white flex flex-col"
-            : "h-full w-full bg-white flex flex-col"
-        }
-        onClick={() => {
-          setDateChoice("day-7");
-        }}
-      >
-        <h2 className="text-slate-700">{days[6]}</h2>
+      <div className="h-full w-full bg-white flex flex-col">
+        <h2
+          className={
+            dateChoice === "day-7"
+              ? "text-slate-800 w-ful text-left ml-5 p-2 underline"
+              : "text-slate-700 w-full text-left ml-5 p-2"
+          }
+          onClick={() => {
+            setDateChoice("day-7");
+          }}
+        >
+          {days[6]}
+        </h2>
         {
           <CurrItems
             currItems={currItems}

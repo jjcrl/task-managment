@@ -20,13 +20,22 @@ const ThreeDayView = ({
           setDateChoice("day-1");
         }}
       >
-        <h2 className="text-slate-700">{days[0]}</h2>
+        <h2
+          className={
+            dateChoice === "day-1"
+              ? "text-slate-700 w-ful text-left ml-5 p-2 underline"
+              : "text-slate-700 w-full text-left ml-5 p-2"
+          }
+        >
+          {days[0]}
+        </h2>
+
         {
           <CurrItems
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-fit w-full flex flex-col gap-6 px-6 mx-atuo overflow-scroll pb-10"
+            classTest="h-full w-full flex flex-col gap-8 px-5 overflow-scroll"
             day={"day-1"}
             limit={3}
           />
@@ -43,13 +52,21 @@ const ThreeDayView = ({
         }}
       >
         {" "}
-        <h2 className="text-slate-700">{days[1]}</h2>
+        <h2
+          className={
+            dateChoice === "day-2"
+              ? "text-slate-700 w-ful text-left ml-5 p-2 underline"
+              : "text-slate-700 w-full text-left ml-5 p-2"
+          }
+        >
+          {days[1]}
+        </h2>
         {
           <CurrItems
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-fit w-full flex flex-col gap-6 px-6 mx-auto overflow-scroll pb-10"
+            classTest="h-full w-full flex flex-col gap-8 px-5 overflow-scroll"
             day={"day-2"}
             limit={3}
           />
@@ -66,13 +83,21 @@ const ThreeDayView = ({
         }}
       >
         {" "}
-        <h2 className="text-slate-700">{days[2]}</h2>{" "}
+        <h2
+          className={
+            dateChoice === "day-3"
+              ? "text-slate-700 w-ful text-left ml-5 p-2 underline"
+              : "text-slate-700 w-full text-left ml-5 p-2"
+          }
+        >
+          {days[2]}
+        </h2>{" "}
         {
           <CurrItems
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
-            classTest="h-fit w-full flex flex-col gap-6 px-6 mx-auto overflow-scroll pb-10"
+            classTest="h-full w-full flex flex-col gap-8 px-5 overflow-scroll"
             day={"day-3"}
             limit={3}
           />
