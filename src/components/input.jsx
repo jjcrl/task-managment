@@ -5,18 +5,11 @@ const Input = ({ setCurrItems, dateChoice, view, today }) => {
   const [input, setInput] = useState();
   const [toggle, setToggle] = useState(false);
 
-  console.log(today);
-
+  const time = today.toString().slice(15, 24);
   const date = today.toLocaleDateString("en-US", {
     day: "numeric",
     month: "numeric",
   });
-
-  const time = today.toString().slice(15, 24);
-
-  const handleSubmit = () => {
-    setInput("");
-  };
 
   const emojiArr = [
     "🚀",
@@ -65,8 +58,11 @@ const Input = ({ setCurrItems, dateChoice, view, today }) => {
     "⭐️",
     "🌟",
   ];
-
   const emoji = emojiArr[Math.floor(Math.random() * emojiArr.length)];
+
+  const handleSubmit = () => {
+    setInput("");
+  };
 
   const addItem = () => {
     setCurrItems((currItems) => [
@@ -85,7 +81,7 @@ const Input = ({ setCurrItems, dateChoice, view, today }) => {
   };
 
   const onEnterPress = (e) => {
-    if (e.keyCode === 13) {
+    if (e.keyCode === 13 && input.length > 0) {
       addItem();
       handleSubmit();
     }
