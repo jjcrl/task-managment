@@ -27,7 +27,7 @@ const WeekView = ({
           setDateChoice("day-1");
         }}
       >
-        <h2 className="text-zinc-700">{formatDate(today)}</h2>
+        <h2 className="text-slate-700">{formatDate(today)}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -52,7 +52,7 @@ const WeekView = ({
           setDateChoice("day-2");
         }}
       >
-        <h2 className="text-zinc-700">{formatDate(daytwo)}</h2>
+        <h2 className="text-slate-700">{formatDate(daytwo)}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -77,7 +77,7 @@ const WeekView = ({
           setDateChoice("day-3");
         }}
       >
-        <h2 className="text-zinc-700">{formatDate(daythree)}</h2>
+        <h2 className="text-slate-700">{formatDate(daythree)}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -102,7 +102,7 @@ const WeekView = ({
           setDateChoice("day-4");
         }}
       >
-        <h2 className="text-stone-700">{formatDate(dayfour)}</h2>
+        <h2 className="text-slate-700">{formatDate(dayfour)}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -127,7 +127,7 @@ const WeekView = ({
           setDateChoice("day-5");
         }}
       >
-        <h2 className="text-zinc-700">{formatDate(dayfive)}</h2>
+        <h2 className="text-slate-700">{formatDate(dayfive)}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -152,7 +152,7 @@ const WeekView = ({
           setDateChoice("day-6");
         }}
       >
-        <h2 className="text-zinc-700">{formatDate(daysix)}</h2>
+        <h2 className="text-slate-700">{formatDate(daysix)}</h2>
 
         {
           <CurrItems
@@ -178,7 +178,7 @@ const WeekView = ({
           setDateChoice("day-7");
         }}
       >
-        <h2 className="text-zinc-700">{formatDate(dayseven)}</h2>
+        <h2 className="text-slate-700">{formatDate(dayseven)}</h2>
         {
           <CurrItems
             currItems={currItems}

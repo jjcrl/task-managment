@@ -23,7 +23,7 @@ const ThreeDayView = ({
           setDateChoice("day-1");
         }}
       >
-        <h2 className="text-zinc-700">{formatDate(today)}</h2>
+        <h2 className="text-slate-700">{formatDate(today)}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -46,7 +46,7 @@ const ThreeDayView = ({
         }}
       >
         {" "}
-        <h2 className="text-zinc-700">{formatDate(daytwo)}</h2>
+        <h2 className="text-slate-700">{formatDate(daytwo)}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -69,7 +69,7 @@ const ThreeDayView = ({
         }}
       >
         {" "}
-        <h2 className="text-zinc-700">{formatDate(daythree)}</h2>{" "}
+        <h2 className="text-slate-700">{formatDate(daythree)}</h2>{" "}
         {
           <CurrItems
             currItems={currItems}

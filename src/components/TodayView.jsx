@@ -15,7 +15,7 @@ const TodayView = ({
         setDateChoice("day-1");
       }}
     >
-      <h2 className="text-zinc-700 w-full text-left ml-5 p-2">
+      <h2 className="text-slate-700 w-full text-left ml-5 p-2">
         {formatDate(today)}
       </h2>
 
