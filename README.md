@@ -1,5 +1,5 @@
 # TASK MANAGMENT WEB APP
 
-hello
+## React Web App 
 
-curr under construction
+A classic to do app built with React, Javascript and Tailwind CSS
