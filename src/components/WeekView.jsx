@@ -6,15 +6,8 @@ const WeekView = ({
   setPrevItems,
   setDateChoice,
   dateChoice,
-  today,
+  days,
 }) => {
-  const daytwo = new Date(today.getTime() + 60 * 60 * 24 * 1000);
-  const daythree = new Date(today.getTime() + 60 * 60 * 48 * 1000);
-  const dayfour = new Date(today.getTime() + 60 * 60 * 72 * 1000);
-  const dayfive = new Date(today.getTime() + 60 * 60 * 96 * 1000);
-  const daysix = new Date(today.getTime() + 60 * 60 * 120 * 1000);
-  const dayseven = new Date(today.getTime() + 60 * 60 * 148 * 1000);
-
   return (
     <div className="h-full w-full grid grid-cols-4 auto-rows-auto bg-whgite">
       <div
@@ -27,16 +20,15 @@ const WeekView = ({
           setDateChoice("day-1");
         }}
       >
-        <h2 className="text-slate-700">{formatDate(today)}</h2>
+        <h2 className="text-slate-700">{days[0]}</h2>
         {
           <CurrItems
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"
-            day="day-1"
+            day={"day-1"}
             mini={true}
-            date={formatDate(today)}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
           />
@@ -52,16 +44,15 @@ const WeekView = ({
           setDateChoice("day-2");
         }}
       >
-        <h2 className="text-slate-700">{formatDate(daytwo)}</h2>
+        <h2 className="text-slate-700">{days[1]}</h2>
         {
           <CurrItems
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"
-            day="day-2"
+            day={"day-2"}
             mini={true}
-            date={formatDate(daytwo)}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
           />
@@ -77,7 +68,7 @@ const WeekView = ({
           setDateChoice("day-3");
         }}
       >
-        <h2 className="text-slate-700">{formatDate(daythree)}</h2>
+        <h2 className="text-slate-700">{days[2]}</h2>
         {
           <CurrItems
             currItems={currItems}
@@ -85,8 +76,7 @@ const WeekView = ({
             setPrevItems={setPrevItems}
             mini={true}
             classTest="h-fit w-full flex flex-col "
-            day="day-3"
-            date={formatDate(daythree)}
+            day={"day-3"}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
           />
@@ -102,16 +92,15 @@ const WeekView = ({
           setDateChoice("day-4");
         }}
       >
-        <h2 className="text-slate-700">{formatDate(dayfour)}</h2>
+        <h2 className="text-slate-700">{days[3]}</h2>
         {
           <CurrItems
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"
-            day="day-4"
+            day={"day-4"}
             mini={true}
-            date={formatDate(dayfour)}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
           />
@@ -127,16 +116,15 @@ const WeekView = ({
           setDateChoice("day-5");
         }}
       >
-        <h2 className="text-slate-700">{formatDate(dayfive)}</h2>
+        <h2 className="text-slate-700">{days[4]}</h2>
         {
           <CurrItems
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"
-            day="day-5"
+            day={"day-5"}
             mini={true}
-            date={formatDate(dayfive)}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
           />
@@ -152,7 +140,7 @@ const WeekView = ({
           setDateChoice("day-6");
         }}
       >
-        <h2 className="text-slate-700">{formatDate(daysix)}</h2>
+        <h2 className="text-slate-700">{days[5]}</h2>
 
         {
           <CurrItems
@@ -160,9 +148,8 @@ const WeekView = ({
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"
-            day="day-6"
+            day={"day-6"}
             mini={true}
-            date={formatDate(daysix)}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
           />
@@ -178,16 +165,15 @@ const WeekView = ({
           setDateChoice("day-7");
         }}
       >
-        <h2 className="text-slate-700">{formatDate(dayseven)}</h2>
+        <h2 className="text-slate-700">{days[6]}</h2>
         {
           <CurrItems
             currItems={currItems}
             setCurrItems={setCurrItems}
             setPrevItems={setPrevItems}
             classTest="h-fit w-full flex flex-col"
-            day="day-7"
+            day={"day-7"}
             mini={true}
-            date={formatDate(dayseven)}
             setDateChoice={setDateChoice}
             dateChoice={dateChoice}
           />

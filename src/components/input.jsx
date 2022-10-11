@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { formatDate } from "./formatDate";
 
 const Input = ({ setCurrItems, dateChoice, view, today }) => {
   const [input, setInput] = useState();
