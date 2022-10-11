@@ -1,8 +1,18 @@
 import { useState } from "react";
+import { formatDate } from "./formatDate";
 
-const Input = ({ setCurrItems, dateChoice, view }) => {
+const Input = ({ setCurrItems, dateChoice, view, today }) => {
   const [input, setInput] = useState();
   const [toggle, setToggle] = useState(false);
+
+  console.log(today);
+
+  const date = today.toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "numeric",
+  });
+
+  const time = today.toString().slice(15, 24);
 
   const handleSubmit = () => {
     setInput("");
@@ -67,6 +77,7 @@ const Input = ({ setCurrItems, dateChoice, view }) => {
         emoji,
         dateChoice: dateChoice ? dateChoice : "day-1",
         id: currItems.length,
+        created_at: date + time,
       },
     ]);
     setInput("");
