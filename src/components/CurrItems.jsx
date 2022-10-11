@@ -79,7 +79,7 @@ const CurrItems = ({
           </div>
           <button
             onClick={(e) => handleExpand(e)}
-            className="tracking-widest bg-white h-10 w-fit px-8 mt-3 rounded-3xl border-2 border-zinc-200 shadow-sm text-lg font-semibold grid items-center m-auto"
+            className="tracking-widest bg-slate-100 h-10 w-fit px-8 mt-3 rounded-2xl border-2 border-indigo-100 shadow-sm text-lg font-semibold grid items-center m-auto text-slate-800"
           >
             Show More
           </button>
@@ -184,15 +184,15 @@ const CurrItems = ({
 
           {currItems.filter((item) => item.dateChoice === day && !item.priority)
             .length > 3 && limit ? (
-            <li
-              className="bg-white w-full rounded-xl text-xl my-1 py-1 px-20 border-2 border-zinc-100 shadow-sm text-zinc-800 font-semibold"
+            <button
+              className="bg-slate-100 w-full rounded-2xl text-xl my-1 py-1 px-20 border-2 border-indigo-100 shadow-sm text-slate-800 font-semibold"
               onClick={(e) => handleExtendList(e)}
             >
               {display} +{" "}
               {currItems.filter(
                 (item) => item.dateChoice === day && !item.priority
               ).length - 3}
-            </li>
+            </button>
           ) : null}
         </ul>
 
