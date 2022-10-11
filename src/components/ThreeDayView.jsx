@@ -23,7 +23,7 @@ const ThreeDayView = ({
         <h2
           className={
             dateChoice === "day-1"
-              ? "text-slate-700 w-ful text-left ml-5 p-2 underline"
+              ? "text-slate-800 w-ful text-left ml-5 p-2 underline"
               : "text-slate-700 w-full text-left ml-5 p-2"
           }
         >
@@ -55,7 +55,7 @@ const ThreeDayView = ({
         <h2
           className={
             dateChoice === "day-2"
-              ? "text-slate-700 w-ful text-left ml-5 p-2 underline"
+              ? "text-slate-800 w-ful text-left ml-5 p-2 underline"
               : "text-slate-700 w-full text-left ml-5 p-2"
           }
         >
@@ -86,7 +86,7 @@ const ThreeDayView = ({
         <h2
           className={
             dateChoice === "day-3"
-              ? "text-slate-700 w-ful text-left ml-5 p-2 underline"
+              ? "text-slate-800 w-ful text-left ml-5 p-2 underline"
               : "text-slate-700 w-full text-left ml-5 p-2"
           }
         >
