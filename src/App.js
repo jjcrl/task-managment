@@ -35,8 +35,8 @@ function App() {
     "day-2": day2,
     "day-3": day3,
     "day-4": day4,
-    "day-4": day5,
-    "day-5": day6,
+    "day-5": day5,
+    "day-6": day6,
     "day-7": day7,
   };
 
