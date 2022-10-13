@@ -13,25 +13,15 @@ function App() {
   const [prevItems, setPrevItems] = useState([]);
   const [view, setView] = useState("today");
   const [dateChoice, setDateChoice] = useState();
-  const [storageKey, setStorageKey] = useState(0);
-
-  useEffect(() => {
-    if (currItems.length > 0) {
-      localStorage.setItem(
-        `item-${storageKey}`,
-        JSON.stringify(currItems[currItems.length - 1])
-      );
-      setStorageKey((storageKey) => storageKey + 1);
-    }
-  }, [currItems]);
 
   useEffect(() => {
     if (localStorage && currItems.length === 0) {
-      const storageItems = Object.values(localStorage);
-      const parsedItems = storageItems.map((item) => JSON.parse(item));
-      setCurrItems(parsedItems);
+      const storageItems = Object.values(localStorage)
+        .map((item) => JSON.parse(item))
+        .filter((item) => !item.complete);
+      setCurrItems(storageItems);
     }
-  }, []);
+  }, [currItems]);
 
   const percent = Math.floor(
     (prevItems.filter((item) => item.dateChoice === "day-1").length /
