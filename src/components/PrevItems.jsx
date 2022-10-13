@@ -44,8 +44,8 @@ const PrevItems = ({ prevItems }) => {
               className="p-2 text-lg text-zinc-800 font-semibold text-left w-full bg-white rounded-lg pl-4 pr-3 ml-0 shadow-sm line-through tracking-wide"
               id="first-none-strike"
             >
-              {item.input.length > 25
-                ? `${item.emoji} ${item.input.slice(0, 25)}...`
+              {item.input.length > 20
+                ? `${item.emoji} ${item.input.slice(0, 20)}...`
                 : `${item.emoji} ${item.input}`}
             </li>
           </div>
