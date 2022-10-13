@@ -7,7 +7,6 @@ const ThreeDayView = ({
   dateChoice,
   days,
 }) => {
-  console.log(days);
   return (
     <div className="h-full w-full grid grid-rows-1 grid-cols-3 bg-stone-50">
       <div
