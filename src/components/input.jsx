@@ -109,24 +109,36 @@ const Input = ({
           type="text"
           onKeyDown={onEnterPress}
         />{" "}
-        <div className="flex flex-row-reverse w-fit py-1 gap-2 border rounded-md bg-white shadow-sm absolute top-40 -m-4 px-2 pr-3 ml-2 border-gray-500 justify-between">
-          <p className="m-auto font-light text-zinc-600">Priority Item</p>
-          <input
-            type="checkbox"
-            id="important"
-            className="h-7 w-7 my-1"
-            onChange={() => {
-              setToggle(!toggle);
-            }}
-            checked={toggle}
-          />
-        </div>
-        <div className="absolute ml-40 top-40 -m-4 border px-3 py-2.5 bg-white w-fit h-11.5 rounded-md font-regular border-gray-500 shadow-sm text-zinc-500">
-          <p className="underline">
-            {taskDateOptions[dateChoice]
-              ? taskDateOptions[dateChoice]
-              : taskDateOptions["day-1"]}
-          </p>
+        <div className="flex flex-row absolute gap-2 px-1 top-40 -m-4 ml-1">
+          <div className="w-fit bg-white border border-gray-500 rounded-md shadow-sm">
+            <button
+              className="h-11 w-11 m-auto text-center pl-1 text-2xl text-zinc-700 font-medium"
+              onClick={() => {
+                localStorage.clear();
+              }}
+            >
+              ↺
+            </button>
+          </div>
+          <div className="flex flex-row-reverse w-fit py-1 gap-2 border rounded-md bg-white shadow-sm border-gray-500 px-2">
+            <p className="m-auto font-light text-zinc-600">Priority Item</p>
+            <input
+              type="checkbox"
+              id="important"
+              className="h-7 w-7 my-1"
+              onChange={() => {
+                setToggle(!toggle);
+              }}
+              checked={toggle}
+            />
+          </div>
+          <div className=" border px-3 py-2.5 bg-white w-fit h-11.5 rounded-md font-regular border-gray-500 shadow-sm text-zinc-500">
+            <p className="underline">
+              {taskDateOptions[dateChoice]
+                ? taskDateOptions[dateChoice]
+                : taskDateOptions["day-1"]}
+            </p>
+          </div>
         </div>
       </form>
     </>
