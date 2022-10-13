@@ -19,7 +19,7 @@ function App() {
     if (currItems.length > 0) {
       localStorage.setItem(
         `item-${storageKey}`,
-        JSON.stringify(currItems.slice(-1))
+        JSON.stringify(currItems[currItems.length - 1])
       );
       setStorageKey((storageKey) => storageKey + 1);
     }
