@@ -78,6 +78,7 @@ const Input = ({
       dateChoice: dateChoice ? dateChoice : "day-1",
       id: currItems.length,
       created_at: date + time,
+      completed: false,
     };
 
     setCurrItems((currItems) => [...currItems, newItem]);
