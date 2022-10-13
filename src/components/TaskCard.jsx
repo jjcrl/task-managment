@@ -70,7 +70,7 @@ const TaskCard = ({ item, index, updateItem, removeItem }) => {
       <li className="w-full h-full text-left text-lg font-semibold first-letter:uppercase rounded-xl bg-indigo-50 border-2 border-indigo-100 shadow-md px-5 py-3 leading-none tracking-wide">
         • {item.input}
         <span className="pl-2 italic font-medium text-sm tracking-tight leading-none opacity-60 text-indigo-400">
-          {item.created_at}
+          {item.created_at.slice(0, 11)}
         </span>
       </li>
     </div>
