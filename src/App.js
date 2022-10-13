@@ -25,6 +25,14 @@ function App() {
     }
   }, [currItems]);
 
+  useEffect(() => {
+    if (localStorage && currItems.length === 0) {
+      const storageItems = Object.values(localStorage);
+      const parsedItems = storageItems.map((item) => JSON.parse(item));
+      setCurrItems(parsedItems);
+    }
+  }, []);
+
   const percent = Math.floor(
     (prevItems.filter((item) => item.dateChoice === "day-1").length /
       (currItems.filter((item) => item.dateChoice === "day-1").length +
