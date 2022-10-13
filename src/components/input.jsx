@@ -70,7 +70,7 @@ const Input = ({ setCurrItems, dateChoice, taskDateOptions, today }) => {
         input: input,
         priority: toggle,
         emoji,
-        dateChoice: dateChoice,
+        dateChoice: dateChoice ? dateChoice : "day-1",
         id: currItems.length,
         created_at: date + time,
       },
@@ -112,7 +112,12 @@ const Input = ({ setCurrItems, dateChoice, taskDateOptions, today }) => {
           />
         </div>
         <div className="absolute ml-16 top-40 -m-3 border px-4 py-2 bg-white w-fit h-10 rounded-sm font-regular border-gray-500 shadow-sm">
-          <p>• {taskDateOptions[dateChoice]}</p>
+          <p>
+            •{" "}
+            {taskDateOptions[dateChoice]
+              ? taskDateOptions[dateChoice]
+              : taskDateOptions["day-1"]}
+          </p>
         </div>
       </form>
     </>
