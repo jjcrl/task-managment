@@ -108,7 +108,7 @@ const CurrItems = ({
           className="bg-indigo-50 w-fit px-7 py-1 rounded-3xl border-2 border-indigo-200 absolute right-10 top-10 shadow-md text-zinc-800"
           onClick={(e) => handleExpand(e)}
         >
-          <button className="px-3 py-2 text-xl font-bold">go back</button>
+          <button className="px-3 py-2 text-xl font-bold">← Show Less</button>
         </div>
 
         <div className="w-full m-auto h-full flex flex-row gap-8 p-10 relative px-20">
