@@ -100,20 +100,20 @@ const Input = ({ setCurrItems, dateChoice, taskDateOptions, today }) => {
           type="text"
           onKeyDown={onEnterPress}
         />{" "}
-        <div className="absolute top-40 left-6 -m-3">
+        <div className="flex flex-row w-fit py-1 gap-2 border rounded-md bg-white shadow-sm absolute top-40 -m-4 px-2 ml-2 border-gray-500">
+          <p className="m-auto font-light text-zinc-600">Priority Item</p>
           <input
             type="checkbox"
             id="important"
-            className="h-10 w-10 shadow-sm"
+            className="h-7 w-7 my-1"
             onChange={() => {
               setToggle(!toggle);
             }}
             checked={toggle}
           />
         </div>
-        <div className="absolute ml-16 top-40 -m-3 border px-4 py-2 bg-white w-fit h-10 rounded-sm font-regular border-gray-500 shadow-sm">
-          <p>
-            •{" "}
+        <div className="absolute ml-40 top-40 -m-4 border px-3 py-2.5 bg-white w-fit h-11.5 rounded-md font-regular border-gray-500 shadow-sm text-zinc-500">
+          <p className="underline">
             {taskDateOptions[dateChoice]
               ? taskDateOptions[dateChoice]
               : taskDateOptions["day-1"]}
