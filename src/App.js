@@ -18,10 +18,11 @@ function App() {
     if (localStorage && currItems.length === 0) {
       const storageItems = Object.values(localStorage)
         .map((item) => JSON.parse(item))
-        .filter((item) => !item.complete);
+        .reverse()
+        .filter((item) => !item.completed);
       setCurrItems(storageItems);
     }
-  }, [currItems]);
+  }, []);
 
   const percent = Math.floor(
     (prevItems.filter((item) => item.dateChoice === "day-1").length /
