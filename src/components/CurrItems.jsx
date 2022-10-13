@@ -24,7 +24,11 @@ const CurrItems = ({
   };
 
   const removeItem = (id) => {
+    const [item] = currItems.filter((item) => item.id === id);
+    const storageItemIndex = currItems.indexOf(item);
+    const storageItemKey = localStorage.key(storageItemIndex);
     setCurrItems(currItems.filter((item) => item.id !== id));
+    localStorage.removeItem(storageItemKey);
   };
 
   const handleExpand = (e) => {
@@ -185,6 +189,7 @@ const CurrItems = ({
             <button
               className="bg-slate-100 w-full rounded-2xl text-xl my-1 py-1 px-20 border-2 border-indigo-100 shadow-sm text-slate-800 font-semibold"
               onClick={(e) => handleExtendList(e)}
+              key="extend-list-button"
             >
               {display} +{" "}
               {currItems.filter(
