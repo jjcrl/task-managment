@@ -18,9 +18,11 @@ function App() {
     if (localStorage && currItems.length === 0) {
       const storageItems = Object.values(localStorage)
         .map((item) => JSON.parse(item))
-        .reverse()
-        .filter((item) => !item.completed);
-      setCurrItems(storageItems);
+        .reverse();
+      const completedItems = storageItems.filter((item) => item.completed);
+      const incompletedItems = storageItems.filter((item) => !item.completed);
+      setCurrItems(incompletedItems);
+      setPrevItems(completedItems);
     }
   }, []);
 
