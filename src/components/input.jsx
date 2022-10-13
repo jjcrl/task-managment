@@ -1,8 +1,15 @@
 import { useState } from "react";
 
-const Input = ({ setCurrItems, dateChoice, taskDateOptions, today }) => {
+const Input = ({
+  currItems,
+  setCurrItems,
+  dateChoice,
+  taskDateOptions,
+  today,
+}) => {
   const [input, setInput] = useState();
   const [toggle, setToggle] = useState(false);
+  const [storageKey, setStorageKey] = useState(0);
 
   const time = today.toString().slice(15, 24);
   const date = today.toLocaleDateString("en-US", {
@@ -64,17 +71,18 @@ const Input = ({ setCurrItems, dateChoice, taskDateOptions, today }) => {
   };
 
   const addItem = () => {
-    setCurrItems((currItems) => [
-      ...currItems,
-      {
-        input: input,
-        priority: toggle,
-        emoji,
-        dateChoice: dateChoice ? dateChoice : "day-1",
-        id: currItems.length,
-        created_at: date + time,
-      },
-    ]);
+    const newItem = {
+      input: input,
+      priority: toggle,
+      emoji,
+      dateChoice: dateChoice ? dateChoice : "day-1",
+      id: currItems.length,
+      created_at: date + time,
+    };
+
+    setCurrItems((currItems) => [...currItems, newItem]);
+    localStorage.setItem(`item-${storageKey}`, JSON.stringify(newItem));
+    setStorageKey((storageKey) => storageKey + 1);
     setInput("");
     setToggle(false);
   };
@@ -100,7 +108,7 @@ const Input = ({ setCurrItems, dateChoice, taskDateOptions, today }) => {
           type="text"
           onKeyDown={onEnterPress}
         />{" "}
-        <div className="flex flex-row w-fit py-1 gap-2 border rounded-md bg-white shadow-sm absolute top-40 -m-4 px-2 pl-3 ml-2 border-gray-500 justify-between">
+        <div className="flex flex-row-reverse w-fit py-1 gap-2 border rounded-md bg-white shadow-sm absolute top-40 -m-4 px-2 pr-3 ml-2 border-gray-500 justify-between">
           <p className="m-auto font-light text-zinc-600">Priority Item</p>
           <input
             type="checkbox"
