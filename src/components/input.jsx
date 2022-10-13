@@ -100,7 +100,7 @@ const Input = ({ setCurrItems, dateChoice, taskDateOptions, today }) => {
           type="text"
           onKeyDown={onEnterPress}
         />{" "}
-        <div className="flex flex-row w-fit py-1 gap-2 border rounded-md bg-white shadow-sm absolute top-40 -m-4 px-2 ml-2 border-gray-500">
+        <div className="flex flex-row w-fit py-1 gap-2 border rounded-md bg-white shadow-sm absolute top-40 -m-4 px-2 pl-3 ml-2 border-gray-500 justify-between">
           <p className="m-auto font-light text-zinc-600">Priority Item</p>
           <input
             type="checkbox"
