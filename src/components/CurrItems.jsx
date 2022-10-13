@@ -19,6 +19,10 @@ const CurrItems = ({
 
   const updateItem = (id) => {
     const [item] = currItems.filter((item) => item.id === id);
+    item.completed = true;
+    const storageItemIndex = currItems.indexOf(item);
+    const storageItemKey = localStorage.key(storageItemIndex);
+    localStorage.setItem(storageItemKey, JSON.stringify(item));
     setPrevItems((prevItems) => [item, ...prevItems]);
     setCurrItems(currItems.filter((item) => item.id !== id));
   };
