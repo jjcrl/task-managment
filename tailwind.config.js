@@ -9,6 +9,9 @@ module.exports = {
     maxHeight: {
       "5/6": "83.333333%",
     },
+    minWidth: {
+      "3/4": "75%",
+    },
     extend: {},
   },
   plugins: [],

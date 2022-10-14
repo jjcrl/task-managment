@@ -54,7 +54,7 @@ function App() {
 
   return (
     <div className="App">
-      <main>
+      <main className="w-screen h-screen">
         <Navigation setView={setView} />
         <section className="w-1/4 h-screen flex flex-col bg-zinc-200">
           <Input
@@ -65,8 +65,8 @@ function App() {
             today={today}
             taskDateOptions={taskDateOptions}
           />
-          <div className="w-full h-min flex flex row px-3 gap-6 py-5 align-center justify-center">
-            <div className="w-full h-8 bg-white flex rounded-3xl">
+          <div className="w-full h-min flex flex row px-3 gap-3 py-5 align-center justify-center">
+            <div className="w-full min-w-full h-8 bg-white flex rounded-3xl relaitve">
               <span
                 className="h-8 bg-lime-400 mr-auto rounded-l-3xl"
                 id="percent-bar"
@@ -116,6 +116,8 @@ function App() {
       <style jsx>{`
         #percent-bar {
           width: ${percent}%;
+          border-top-right-radius: ${percent === 100 ? " 1.5rem" : "0"};
+          border-bottom-right-radius: ${percent === 100 ? " 1.5rem" : "0"};
         }
       `}</style>
     </div>
