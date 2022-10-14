@@ -34,14 +34,14 @@ const PrevItems = ({ prevItems }) => {
             key={`prev-item-${index}`}
           >
             <li
-              className="bg-white w-12 h-11 text-2xl grid items-center shadow-sm rounded-lg"
+              className="bg-white w-12 h-11 text-2xl grid items-center shadow-md rounded-lg px-2"
               key={`emoji-item-${index}`}
             >
               ✅
             </li>
             <li
               key={`item-${index}`}
-              className="p-2 text-lg text-zinc-800 font-semibold text-left w-full bg-white rounded-lg pl-4 pr-3 ml-0 shadow-sm line-through tracking-wide"
+              className="p-2 text-lg text-zinc-500 font-semibold text-left w-full bg-white rounded-lg pl-4 pr-3 ml-0 shadow-md line-through tracking-wider"
               id="first-none-strike"
             >
               {item.input.length > 20
@@ -69,7 +69,7 @@ const PrevItems = ({ prevItems }) => {
             border-radius: 100%;
             opacity: 98%;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            filter: brightness(98%);
+            filter: brightness(99%);
           }
           #emoji-item-2 {
             margin-right: -35px;
@@ -77,7 +77,7 @@ const PrevItems = ({ prevItems }) => {
             border-radius: 100%;
             opacity: 98%;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            filter: brightness(96%);
+            filter: brightness(98%);
           }
           #emoji-item-3 {
             margin-right: -35px;
@@ -85,7 +85,7 @@ const PrevItems = ({ prevItems }) => {
             border-radius: 100%;
             opacity: 98%;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            filter: brightness(94%);
+            filter: brightness(97%);
           }
           #emoji-item-4 {
             margin-right: -35px;
@@ -93,7 +93,7 @@ const PrevItems = ({ prevItems }) => {
             border-radius: 100%;
             opacity: 98%;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            filter: brightness(92%);
+            filter: brightness(96%);
           }
           #emoji-item-5 {
             margin-right: -35px;
@@ -101,7 +101,7 @@ const PrevItems = ({ prevItems }) => {
             border-radius: 100%;
             opacity: 98%;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            filter: brightness(90%);
+            filter: brightness(95%);
           }
 
           #prev-item-0 {
