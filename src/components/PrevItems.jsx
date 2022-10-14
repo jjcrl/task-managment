@@ -7,7 +7,7 @@ const PrevItems = ({ prevItems }) => {
       <div className="flex flex-row">
         <div className="m-auto pl-3">
           <span
-            className="bg-white pl-3 pr-3 py-3 text-3xl font-bold grid items-center border-2 border-zinc-500 text-zinc-800 shadow-md"
+            className="bg-white text-3xl font-bold flex m-auto justify-center align-center items-center border-2 border-zinc-500 text-zinc-800 shadow-md w-16 h-16"
             id="rounded"
           >
             +{prevItems.length > 6 ? prevItems.length - 6 : prevItems.length}
