@@ -104,7 +104,7 @@ const Input = ({
         <textarea
           onChange={(e) => setInput(e.target.value)}
           value={input}
-          className="w-full h-40 text-2xl m-auto p-3 resize-none text-stone-900 bg-zinc-50"
+          className="w-full h-40 text-2xl m-auto p-3 resize-none text-stone-900 bg-zinc-100"
           placeholder="What do you have to do ?"
           type="text"
           onKeyDown={onEnterPress}
