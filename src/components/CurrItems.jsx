@@ -60,7 +60,7 @@ const CurrItems = ({
   if (mini && !expanded) {
     return (
       <div className={classTest}>
-        <ul className="w-5/6 m-auto h-min rounded-xl h-full text-zinc-800 bg-zinc-50 flex flex-col mt-4 pb-4 border-2 border-zinc-100 shadow-sm">
+        <ul className="w-5/6 m-auto h-min rounded-xl h-full text-zinc-800 bg-zinc-50 flex flex-col mt-4 pb-4 border-2 border-slate-50 shadow-sm">
           <div className="w-full h-fit relative flex pl-3 pt-4 ">
             <span
               className="h-10 w-10 bg-white border-2 border-zinc-100 shadow-sm grid items-center font-semibold text-zinc-800"
@@ -121,10 +121,12 @@ const CurrItems = ({
 
         <div className="w-full m-auto h-full flex flex-row gap-8 p-10 relative px-20">
           <ul
-            className="w-full h-3/4 bg-zinc-50 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-sm mt-0 border-2 border-slate-50"
+            className="w-full max-h-5/6 min-h-3/4 bg-zinc-50 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-sm mt-0 border-2 border-slate-50 overflow-scroll"
             onClick={(e) => handleExpand(e)}
           >
-            <h3 className="text-left pl-3 text-zinc-900">Today's Items</h3>
+            <h3 className="text-left text-zinc-300 bg-zinc-100 w-fit rounded-xl px-4 py-1 -mt-1">
+              Today's Items
+            </h3>
 
             {currItems.map((item, index) =>
               !item.priority && item.dateChoice === day ? (
@@ -138,10 +140,12 @@ const CurrItems = ({
             )}
           </ul>
           <ul
-            className="w-full h-3/4 bg-zinc-50 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-sm mt-0 border-2 border-slate-50"
+            className="w-full min-h-3/4 max-h-5/6 bg-zinc-50 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-sm mt-0 border-2 border-slate-50 overflow-scroll"
             onClick={(e) => handleExpand(e)}
           >
-            <h3 className="text-left pl-3 text-zinc-900">Priority Items</h3>
+            <h3 className="text-left text-zinc-300 bg-zinc-100 w-fit rounded-xl px-4 py-1 -mt-1">
+              Priority Items
+            </h3>
 
             {currItems.map((item, index) =>
               item.priority && item.dateChoice === day ? (
@@ -160,15 +164,11 @@ const CurrItems = ({
   } else {
     return (
       <div className={classTest}>
-        <ul
-          className={
-            dateChoice === day
-              ? "w-full h-3/4 bg-zinc-50 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-sm mt-0 border-2 border-slate-50"
-              : "w-full h-3/4 bg-zinc-50 rounded-3xl flex flex-col m-auto px-4 gap-3 py-5 shadow-sm mt-0 border-2 border-slate-50"
-          }
-        >
+        <ul className="w-full max-h-5/6 min-h-1/2 bg-zinc-50 rounded-3xl flex flex-col px-4 gap-3 pt-5 shadow-sm mt-0 border-2 border-slate-50 overflow-scroll">
           {!limit ? (
-            <h3 className="text-left pl-3 text-zinc-900">Today's Items</h3>
+            <h3 className="text-left text-zinc-300 bg-zinc-100 w-fit rounded-xl px-4 py-1 -mt-1">
+              Today's Items
+            </h3>
           ) : null}
           {toggleItems === false
             ? condensedItems.map((item, index) => (
@@ -191,7 +191,7 @@ const CurrItems = ({
           {currItems.filter((item) => item.dateChoice === day && !item.priority)
             .length > 3 && limit ? (
             <button
-              className="bg-slate-100 w-full rounded-2xl text-xl my-1 py-1 px-20 border-2 border-indigo-100 shadow-sm text-slate-800 font-semibold"
+              className="bg-slate-100 w-full rounded-2xl text-xl my-1 py-1 px-20 border-2 border-indigo-100 shadow-sm text-slate-800 font-semibold mb-5"
               onClick={(e) => handleExtendList(e)}
               key="extend-list-button"
             >
@@ -203,9 +203,11 @@ const CurrItems = ({
           ) : null}
         </ul>
 
-        <ul className="flex flex-col bg-zinc-50 h-3/4 px-4 m-auto rounded-2xl gap-3 py-5 w-full mt-0 shadow-sm border border-slate-50">
+        <ul className="flex flex-col bg-zinc-50 max-h-5/6 min-h-1/2 px-4 rounded-2xl gap-3 py-5 w-full mt-0 shadow-sm border-2 border-slate-50 overflow-scroll">
           {!limit ? (
-            <h3 className="text-left pl-3 text-zinc-900">Priority Items</h3>
+            <h3 className="text-left text-zinc-300 bg-zinc-100 w-fit rounded-xl px-4 py-1 -mt-1">
+              Priority Items
+            </h3>
           ) : null}
           {currItems.map((item, index) =>
             item.priority && item.dateChoice === day ? (
