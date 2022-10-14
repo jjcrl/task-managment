@@ -56,7 +56,7 @@ function App() {
     <div className="App">
       <main>
         <Navigation setView={setView} />
-        <section className="w-1/4 h-screen flex flex-col bg-zinc-100">
+        <section className="w-1/4 h-screen flex flex-col bg-zinc-200">
           <Input
             currItems={currItems}
             setCurrItems={setCurrItems}
