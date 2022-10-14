@@ -65,8 +65,16 @@ function App() {
             today={today}
             taskDateOptions={taskDateOptions}
           />
-          <div className="w-min h-min text-6xl text-slate-700 ml-auto p-5">
-            <h2>{percent ? `${percent}%` : "0%"}</h2>
+          <div className="w-full h-min flex flex row px-3 gap-6 py-5 align-center justify-center">
+            <div className="w-full h-8 bg-white flex rounded-3xl">
+              <span
+                className="h-8 bg-lime-400 mr-auto rounded-l-3xl"
+                id="percent-bar"
+              ></span>
+            </div>
+            <span className="text-3xl font-bold text-zinc-700 relative bottom-0.5 pr-2">
+              {percent ? `${percent}%` : "0%"}
+            </span>
           </div>
           <PrevItems prevItems={prevItems} />
         </section>
@@ -105,6 +113,11 @@ function App() {
           )}
         </section>
       </main>
+      <style jsx>{`
+        #percent-bar {
+          width: ${percent}%;
+        }
+      `}</style>
     </div>
   );
 }
