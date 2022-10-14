@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Satoshi";
+  src: url(./fonts/Satoshi/Satoshi-Regular.otf) f;
+}
+
 body {
   margin: 0;
   font-family: "Satoshi";
