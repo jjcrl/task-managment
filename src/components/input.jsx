@@ -110,9 +110,9 @@ const Input = ({
           onKeyDown={onEnterPress}
         />{" "}
         <div className="flex flex-row absolute gap-2 px-1 top-40 -m-4 ml-1">
-          <div className="w-fit bg-white border border-gray-500 rounded-md shadow-sm">
+          <div className="w-fit bg-white border border-gray-400 rounded-md shadow-sm">
             <button
-              className="h-11 w-11 m-auto text-center pl-1 text-2xl text-zinc-700 font-medium"
+              className="w-11 text-center pl-1 text-4xl text-zinc-700 font-medium flex justify-center align-center leading-none"
               onClick={() => {
                 localStorage.clear();
               }}
@@ -120,8 +120,8 @@ const Input = ({
               ↺
             </button>
           </div>
-          <div className="flex flex-row-reverse w-fit py-1 gap-2 border rounded-md bg-white shadow-sm border-gray-500 px-2">
-            <p className="m-auto font-light text-zinc-600">Priority Item</p>
+          <div className="flex flex-row-reverse w-fit py-1 gap-2 border rounded-md bg-white shadow-sm border-gray-400 px-2 pr-2.5">
+            <p className="m-auto font-semibold text-zinc-700">Priority Item</p>
             <input
               type="checkbox"
               id="important"
@@ -132,7 +132,7 @@ const Input = ({
               checked={toggle}
             />
           </div>
-          <div className=" border px-3 py-2.5 bg-white w-fit h-11.5 rounded-md font-regular border-gray-500 shadow-sm text-zinc-500">
+          <div className=" border px-3.5 py-2.5 bg-white w-fit h-11.5 rounded-md font-semibold border-gray-400 shadow-sm text-zinc-700">
             <p className="underline">
               {taskDateOptions[dateChoice]
                 ? taskDateOptions[dateChoice]
