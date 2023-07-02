@@ -7,6 +7,7 @@ import ThreeDayView from "./components/ThreeDayView";
 import WeekView from "./components/WeekView";
 import Navigation from "./components/Navigation";
 import { formatDate } from "./components/formatDate";
+import Clock from "./components/Clock";
 
 function App() {
   const [currItems, setCurrItems] = useState([]);
@@ -66,6 +67,7 @@ function App() {
       <main className="w-screen h-screen">
         <Navigation setView={setView} />
         <section className="w-1/4 h-screen flex flex-col bg-zinc-200">
+          <Clock/>
           <Input
             currItems={currItems}
             setCurrItems={setCurrItems}

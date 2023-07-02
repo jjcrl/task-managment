@@ -4,12 +4,15 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url(./Fonts/Satoshi-Regular.ttf) f;
+  src: local("Satoshi"),
+    url("./Fonts/Satoshi-Regular.ttf") format('opentype');
+  font-display: swap;
+  font-weight: 400;
 }
 
 body {
   margin: 0;
-  font-family: "Satoshi";
+  font-family: Satoshi;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
