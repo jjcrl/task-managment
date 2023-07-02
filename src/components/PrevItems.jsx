@@ -52,7 +52,9 @@ const PrevItems = ({ prevItems }) => {
         ))}
       </ul>
 
-      <style jsx>
+
+
+      <style >
         {`
           #emoji-item-0 {
             font-size: 2.5rem;

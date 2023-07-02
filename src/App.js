@@ -15,16 +15,25 @@ function App() {
   const [dateChoice, setDateChoice] = useState();
 
   useEffect(() => {
-    if (localStorage && currItems.length === 0) {
+    if (typeof localStorage !== 'undefined' && currItems.length === 0) {
       const storageItems = Object.values(localStorage)
-        .map((item) => JSON.parse(item))
-        .reverse();
+      .map((item) => {
+        try {
+          return JSON.parse(item);
+        } catch (error) {
+          console.error("Failed to parse JSON:", item);
+          return null; // Skip the invalid item
+        }
+      })
+      .filter((item) => item !== null)
+      .reverse();
+      
       const completedItems = storageItems.filter((item) => item.completed);
       const incompletedItems = storageItems.filter((item) => !item.completed);
       setCurrItems(incompletedItems);
       setPrevItems(completedItems);
     }
-  }, []);
+  },[currItems.length]);
 
   const percent = Math.floor(
     (prevItems.filter((item) => item.dateChoice === "day-1").length /
