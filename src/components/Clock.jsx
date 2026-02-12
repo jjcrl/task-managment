@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const Clock = () => {
 
     useEffect(() => {
-        const timerId = setInterval(refreshClock, 1000);
+       // const timerId = setInterval(refreshClock, 1000);
       }, []);
       
     const [date, setDate] = useState(new Date());
