@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import Input from "./components/Input";
+import Input from "./components/input";
 import PrevItems from "./components/PrevItems";
 import TodayView from "./components/TodayView";
 import ThreeDayView from "./components/ThreeDayView";
